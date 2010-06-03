@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://saj.informatik.fh-augsburg.de/svn/SAJ"
+   revision="313"
+   last-author="08_urban"
+   url="https://saj.informatik.fh-augsburg.de/svn/SAJ/branches/08/SAJ/doc/presentation/bilder"
+   uuid="1c6c19ff-7773-4fdc-902a-e3f1e70d1936"
+   committed-rev="293"
+   kind="dir"
+   committed-date="2009-12-22T07:41:46.891776Z"/>
+<entry
+   name="ICEfaces-Direct-to-DOM.png"
+   checksum="7d227f11f8f272b2db4a9d3b8a3ae652"
+   last-author="08_urban"
+   text-time="2009-12-20T08:42:23.000000Z"
+   committed-rev="269"
+   kind="file"
+   committed-date="2009-12-20T08:42:23.396545Z"
+   prop-time="2010-01-04T11:44:47.000000Z"/>
+<entry
+   name="ICEfaces-Drag-an-Drop.png"
+   checksum="e746df7b3ef12760be7aba176670b3ce"
+   last-author="08_urban"
+   text-time="2009-12-20T08:42:23.000000Z"
+   committed-rev="269"
+   kind="file"
+   committed-date="2009-12-20T08:42:23.396545Z"
+   prop-time="2010-01-04T11:44:47.000000Z"/>
+<entry
+   name="MyFaces_logo.jpg"
+   checksum="b6891cb8975ba487d58d3bd617b9f032"
+   last-author="08_cuartas"
+   text-time="2009-12-15T21:15:33.000000Z"
+   committed-rev="257"
+   kind="file"
+   committed-date="2009-12-16T17:53:36.773000Z"
+   prop-time="2009-12-16T17:53:34.000000Z"/>
+<entry
+   name="Sichten.png"
+   checksum="79ee5cea56728256bbe7f0ca559d0c2f"
+   last-author="08_urban"
+   text-time="2009-12-20T11:20:50.000000Z"
+   committed-rev="278"
+   kind="file"
+   committed-date="2009-12-20T11:20:50.601753Z"
+   prop-time="2010-01-04T11:44:46.000000Z"/>
+<entry
+   name="button.jpg"
+   checksum="1b5a7d056433476c921baf1a924aa065"
+   last-author="08_urban"
+   text-time="2009-12-22T07:41:46.000000Z"
+   committed-rev="293"
+   kind="file"
+   committed-date="2009-12-22T07:41:46.891776Z"
+   prop-time="2010-01-04T11:44:47.000000Z"/>
+<entry
+   name="facelets.jpg"
+   checksum="5ea830211547b61d59540232e1984ce6"
+   last-author="08_cuartas"
+   text-time="2009-12-20T14:05:51.000000Z"
+   committed-rev="279"
+   kind="file"
+   committed-date="2009-12-20T14:05:51.154204Z"
+   prop-time="2010-01-04T11:44:47.000000Z"/>
+<entry
+   name="faces.jpg"
+   checksum="0dd88fb48a6fef7a179f66cacf72d068"
+   last-author="08_cuartas"
+   text-time="2009-12-15T21:04:54.000000Z"
+   committed-rev="257"
+   kind="file"
+   committed-date="2009-12-16T17:53:36.773000Z"
+   prop-time="2009-12-16T17:53:34.000000Z"/>
+<entry
+   name="form.jpg"
+   checksum="443fa7bccc3183482ce3c0dc36be7bf6"
+   last-author="08_urban"
+   text-time="2009-12-22T07:41:46.000000Z"
+   committed-rev="293"
+   kind="file"
+   committed-date="2009-12-22T07:41:46.891776Z"
+   prop-time="2010-01-04T11:44:46.000000Z"/>
+<entry
+   name="getting_out_of_hand.png"
+   checksum="0e23694182e7879892183ce39ed73a18"
+   last-author="08_cuartas"
+   text-time="2009-12-19T21:03:02.000000Z"
+   committed-rev="267"
+   kind="file"
+   committed-date="2009-12-19T21:03:02.016436Z"
+   prop-time="2010-01-04T11:44:47.000000Z"/>
+<entry
+   name="icefaces.png"
+   checksum="35ce47a0ea34dae36e2ee538f50905c9"
+   last-author="08_urban"
+   text-time="2009-12-20T10:24:29.000000Z"
+   committed-rev="275"
+   kind="file"
+   committed-date="2009-12-20T10:24:29.086649Z"
+   prop-time="2010-01-04T11:44:46.000000Z"/>
+<entry
+   name="jsfJspServletsZusammenhang.jpg"
+   checksum="9eee0b679857c1b167982a65049bee1d"
+   last-author="08_cuartas"
+   committed-rev="260"
+   text-time="2009-12-18T12:24:54.000000Z"
+   kind="file"
+   committed-date="2009-12-18T12:39:37.435000Z"
+   prop-time="2009-12-18T12:27:32.000000Z"/>
+<entry
+   name="lifecycle-complete-de.jpg"
+   checksum="0c30a5b70c21d209883c55f52c64730c"
+   last-author="08_cuartas"
+   text-time="2009-12-19T20:38:13.000000Z"
+   committed-rev="266"
+   kind="file"
+   committed-date="2009-12-19T20:38:13.123127Z"
+   prop-time="2010-01-04T11:44:47.000000Z"/>
+<entry
+   name="mvc.gif"
+   checksum="8421ecbd82215fc80e92af9a778008f8"
+   last-author="08_cuartas"
+   text-time="2009-12-16T20:32:19.955000Z"
+   committed-rev="258"
+   kind="file"
+   committed-date="2009-12-16T20:32:19.955000Z"
+   prop-time="2009-12-16T20:31:44.000000Z"/>
+<entry
+   name="mvc.jpg"
+   checksum="dd31ca63d3e99ce150eca98589cab863"
+   last-author="08_cuartas"
+   committed-rev="258"
+   text-time="2009-12-16T20:04:29.000000Z"
+   kind="file"
+   committed-date="2009-12-16T20:32:19.955000Z"
+   prop-time="2009-12-16T20:31:52.000000Z"/>
+<entry
+   name="mvcJSF.jpg"
+   checksum="9f6583b513e13bec08ef7fe33a0252e8"
+   last-author="08_cuartas"
+   text-time="2009-12-20T14:57:46.000000Z"
+   committed-rev="282"
+   kind="file"
+   committed-date="2009-12-20T14:57:46.558846Z"
+   prop-time="2010-01-04T11:44:47.000000Z"/>
+<entry
+   name="struts.jpg"
+   checksum="75a6bdc912c14e45e4f142f7d9682642"
+   last-author="08_cuartas"
+   text-time="2009-12-20T14:57:46.000000Z"
+   committed-rev="282"
+   kind="file"
+   committed-date="2009-12-20T14:57:46.558846Z"
+   prop-time="2010-01-04T11:44:46.000000Z"/>
+<entry
+   name="tomcat10.jpg"
+   checksum="e95728705df16b0469ffe92a8afd041c"
+   last-author="08_cuartas"
+   text-time="2009-12-19T21:03:02.000000Z"
+   committed-rev="267"
+   kind="file"
+   committed-date="2009-12-19T21:03:02.016436Z"
+   prop-time="2010-01-04T11:44:47.000000Z"/>
+</wc-entries>
