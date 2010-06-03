@@ -26,7 +26,7 @@
 \usepackage{listings}
 %\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt}
 %\lstset{language=Perl}
-\lstloadlanguages{bash,XML,HTML, PHP}
+\lstloadlanguages{bash,XML,HTML, PHP, Python}
 \selectbiblanguage{german}
 \usepackage{makeidx}
 %\usepackage{pifont}
@@ -45,7 +45,7 @@
 \lstset{
 	inputencoding=utf8x,
 	extendedchars=\true,
-	language=XML,
+	language=Python,
 	basicstyle=\tiny,
 	keywordstyle=\bfseries\color{green},
 	identifierstyle=,
@@ -118,7 +118,7 @@ Erfahrung, das Einarbeiten in neue Frameworks zeitaufwändig ist. Somit ist eine
 gute Dokumentation ein weiterer wichtiger Punkt für die Auswahl.
 
 Mit allen oben erwähnten Frameworks kommt man sicher schnell und einfach ans
-Ziel. Letzenlich fiel die Wahl auf Django, das dieses Framework eine recht
+Ziel. Letzenlich fiel die Wahl auf Django, da dieses Framework eine recht
 schnelle Entwicklung für unsere Studienarbeit verspricht. Unter anderem sticht
 die einfache Userverwaltung, der schnell zu konfigurierbare Adminbereich der
 zur Verfügunggestellt wird, der OR-Mapper, das Templatesystem und der DRY: Don't
@@ -134,12 +134,58 @@ Templates zuständig, die mit Hilfe einer eigener Templatesprache konfiguriert
 werden. Die Schnittstelle nach außen zum Server bieten die views (nicht zu
 verwechseln mit der View), die die Kontrolle über die Anwendung bieten. Diese
 beinhalten die Geschäftslogik und dienen als Verbindung zwischen den Modellen
-und den Template.
-
-
+und den Templates.
 
 
 \section{Modelle}
+Für die Anwendung stand zuerst die Erstellung der Klassen bzw. der
+Datenbankmodelle die benötigt werden, um die vorgestellten Ziele erreichen zu
+können. Folgende Klassen werden für die Anwendung benötigt. 
+
+\begin{figure}[ht]
+ \begin{center}
+  \includegraphics[scale=0.5]{pictures/klassen.png}
+ \end{center}
+ \caption{Benötigte Klassen}
+ \label{klassen}
+\end{figure}
+
+Im Zentrum stehen die Tipps, welche die User abgeben können. Die Tipps setzen
+sich zusammen aus den einzelnen Usern (Tipper) und den Spielbegegnungen. In
+diesem Fall die Spiele der WM 2010. Weiterhin setzen sich diese aus Den
+Mannschaften und weiteren Informationen, wie Spielzeit den Ergebnissen zusammen.
+\\
+\\
+
+\begin{lstlisting}[caption=Modelle in Django]{Name}
+class Tipps(models.Model):
+    user = models.ForeignKey(User, unique=False)
+    begegnung = models.ForeignKey(Begegnung, unique=False)
+    
+    toreHeim = models.IntegerField(max_length=2)
+    toreGast = models.IntegerField(max_length=2)
+    tippDatum = models.DateTimeField()
+    
+    def __unicode__(self):
+        return u'%s %s' % (self.user, self.begegnung)
+   
+\end{lstlisting}
+
+Mit Hilfe des eingebauten OR-Mappers in Django können die Tabellen aus den
+vorher definierten Klassen als Tabellen in die Datenbank gespeichert werden.
+Die Speicherung bzw. Synchronisation geschieht mit Django eigenen Boardmitteln.
+
+\begin{lstlisting}[caption=Datenbanksynchronisation]{sync}
+python manage.py syncdb
+\end{lstlisting}
+
+Damit python mit der Datenbank kommunizieren kann muss vorher ein
+Datenbank-Connector installiert werden. Django unterstützt Oracle, PostgreSQL,
+MySQL und SQLite. Die Installation des Connectors ist abhängig von der
+Datenbank, die benutzt werden soll. Getestet wurden mySQL und PostgreSQL
+hierbei bei der lokalen Entwicklung unter Ubuntu mySQL und auf den
+Applikationsserver Postgres.
+
 \section{Views}
 \section{Registrierung}
 \section{Hilfsskripte}

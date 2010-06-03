@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.5.14)  3 JUN 2010 14:16
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.5.14)  3 JUN 2010 19:05
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -453,28 +453,53 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 115.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 115.
- [3] [4]
-(./document.aux) ) 
+ [3]
+<pictures/klassen.png, id=75, 845.40843pt x 597.73312pt>
+File: pictures/klassen.png Graphic file (type png)
+
+<use pictures/klassen.png>
+Underfull \hbox (badness 10000) in paragraph at lines 153--159
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--159
+
+ []
+
+(/usr/share/texmf-texlive/tex/latex/ucs/utf8x.def
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+) [4 <./pictures/klassen.png>] (/usr/share/texmf-texlive/tex/latex/ucs/utf8x.de
+f
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+)
+Overfull \hbox (10.67648pt too wide) in paragraph at lines 182--188
+\T1/cmr/m/n/12 Connector in-stal-liert wer-den. Djan-go un-ter-stützt Or-a-cle,
+ Post-greSQL, MySQL und SQLite.
+ []
+
+[5] (./document.aux) ) 
 Here is how much of TeX's memory you used:
- 8518 strings out of 495061
- 123076 string characters out of 1182621
- 255901 words of memory out of 3000000
- 11542 multiletter control sequences out of 15000+50000
- 15013 words of font info for 36 fonts, out of 3000000 for 9000
+ 8617 strings out of 495061
+ 124319 string characters out of 1182621
+ 297205 words of memory out of 3000000
+ 11617 multiletter control sequences out of 15000+50000
+ 16560 words of font info for 38 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 43i,8n,47p,336b,696s stack positions out of 5000i,500n,10000p,200000b,50000s
- </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm100
-0.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> <
-/home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/merk
-ur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/merkur/.texmf-
-var/fonts/pk/ljfour/jknappen/ec/ecsx1200.600pk> </home/merkur/.texmf-var/fonts/
-pk/ljfour/jknappen/ec/ecsx1728.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/
-jknappen/ec/ecsl1200.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/e
-c/ecrm1728.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx2488
-.600pk>
-Output written on document.pdf (4 pages, 106992 bytes).
+ 43i,8n,47p,336b,994s stack positions out of 5000i,500n,10000p,200000b,50000s
+ </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecb
+x0600.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600p
+k> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/
+merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/merkur/.te
+xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/merkur/.texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/merkur/.texmf-var/fonts/pk/ljf
+our/jknappen/ec/ecsx1200.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknapp
+en/ec/ecsx1728.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl
+1200.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk
+> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx2488.600pk>
+Output written on document.pdf (5 pages, 145487 bytes).
 PDF statistics:
- 362 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 456 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
