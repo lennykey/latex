@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.5.14)  4 JUN 2010 10:16
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.5.14)  4 JUN 2010 10:53
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -473,15 +473,15 @@ File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 f
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 )
-Overfull \hbox (10.67648pt too wide) in paragraph at lines 182--188
+Overfull \hbox (10.67648pt too wide) in paragraph at lines 182--192
 \T1/cmr/m/n/12 Connector in-stal-liert wer-den. Djan-go un-ter-stützt Or-a-cle,
  Post-greSQL, MySQL und SQLite.
  []
 
 [5] (./document.aux) ) 
 Here is how much of TeX's memory you used:
- 8617 strings out of 495061
- 124319 string characters out of 1182621
+ 8618 strings out of 495061
+ 124330 string characters out of 1182621
  297205 words of memory out of 3000000
  11617 multiletter control sequences out of 15000+50000
  16560 words of font info for 38 fonts, out of 3000000 for 9000
@@ -497,9 +497,9 @@ our/jknappen/ec/ecsx1200.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknapp
 en/ec/ecsx1728.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl
 1200.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk
 > </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx2488.600pk>
-Output written on document.pdf (5 pages, 145412 bytes).
+Output written on document.pdf (5 pages, 147566 bytes).
 PDF statistics:
- 456 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
+ 463 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

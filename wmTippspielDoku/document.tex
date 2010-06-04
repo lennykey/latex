@@ -184,7 +184,12 @@ Datenbank-Connector installiert werden. Django unterstützt Oracle, PostgreSQL,
 MySQL und SQLite. Die Installation des Connectors ist abhängig von der
 Datenbank, die benutzt werden soll. Getestet wurden mySQL und PostgreSQL
 hierbei bei der lokalen Entwicklung unter Ubuntu mySQL und auf dem
-Produktionsserver Postgres.
+Produktionsserver Postgres. Bei der Speicherung und Auslesen der Daten erwies
+sich mySQL toleranter für den Produktionsserver mussten drei
+Views\footnote{Django funktion} für PostgreSQL angepasst werden, weil
+Exceptions von Django zurückgegeben wurden, die auf Probleme mit dem Speichern
+und Auslesen von Daten zurückzuführen waren.
+
 
 
 \section{Views}
