@@ -1,0 +1,5 @@
+#Thu Jun 03 17:26:32 CEST 2010
+viewerNames.TEMP=acroread (/usr/bin/acroread),xdvi (/usr/bin/xdvi),none (),yap (),itexmac (/bin/open),kdvi (),gv ()
+viewerCurrent=acroread
+viewerNames=acroread,xdvi,none,yap,itexmac,kdvi,gv
+eclipse.preferences.version=1
