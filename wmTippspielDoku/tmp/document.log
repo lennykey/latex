@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.5.14)  4 JUN 2010 10:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.5.14)  6 JUN 2010 20:04
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -478,28 +478,35 @@ Overfull \hbox (10.67648pt too wide) in paragraph at lines 182--192
  Post-greSQL, MySQL und SQLite.
  []
 
-[5] (./document.aux) ) 
+[5] (/usr/share/texmf-texlive/tex/latex/ucs/utf8x.def
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+)
+(/usr/share/texmf-texlive/tex/latex/ucs/utf8x.def
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+) [6] (./document.aux) ) 
 Here is how much of TeX's memory you used:
- 8618 strings out of 495061
- 124330 string characters out of 1182621
- 297205 words of memory out of 3000000
- 11617 multiletter control sequences out of 15000+50000
- 16560 words of font info for 38 fonts, out of 3000000 for 9000
+ 8666 strings out of 495061
+ 125075 string characters out of 1182621
+ 396205 words of memory out of 3000000
+ 11633 multiletter control sequences out of 15000+50000
+ 17931 words of font info for 40 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  43i,8n,47p,336b,994s stack positions out of 5000i,500n,10000p,200000b,50000s
- </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecb
-x0600.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600p
-k> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/
-merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/merkur/.te
-xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/merkur/.texmf-var/fo
-nts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/merkur/.texmf-var/fonts/pk/ljf
-our/jknappen/ec/ecsx1200.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknapp
-en/ec/ecsx1728.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl
-1200.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk
-> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx2488.600pk>
-Output written on document.pdf (5 pages, 147566 bytes).
+ </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/e
+cti0600.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.60
+0pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0600.600pk> </hom
+e/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/merkur/.
+texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/merkur/.texmf-var/
+fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/merkur/.texmf-var/fonts/pk/l
+jfour/jknappen/ec/ecrm0800.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jkna
+ppen/ec/ecrm1200.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ec
+sx1200.600pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx1728.600
+pk> </home/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1200.600pk> </home
+/merkur/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/merkur/.t
+exmf-var/fonts/pk/ljfour/jknappen/ec/ecsx2488.600pk>
+Output written on document.pdf (6 pages, 184310 bytes).
 PDF statistics:
- 463 PDF objects out of 1000 (max. 8388607)
- 33 named destinations out of 1000 (max. 500000)
+ 599 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

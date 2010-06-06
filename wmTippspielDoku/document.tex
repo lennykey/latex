@@ -157,7 +157,7 @@ Mannschaften und weiteren Informationen, wie Spielzeit den Ergebnissen zusammen.
 \\
 \\
 
-\begin{lstlisting}[caption=Modelle in Django]{Name}
+\begin{lstlisting}[caption=Modelle in Django]{modelleDjango}
 class Tipps(models.Model):
     user = models.ForeignKey(User, unique=False)
     begegnung = models.ForeignKey(Begegnung, unique=False)
@@ -185,16 +185,76 @@ MySQL und SQLite. Die Installation des Connectors ist abhängig von der
 Datenbank, die benutzt werden soll. Getestet wurden mySQL und PostgreSQL
 hierbei bei der lokalen Entwicklung unter Ubuntu mySQL und auf dem
 Produktionsserver Postgres. Bei der Speicherung und Auslesen der Daten erwies
-sich mySQL toleranter für den Produktionsserver mussten drei
+sich mySQL toleranter, für den Produktionsserver mussten drei
 Views\footnote{Django funktion} für PostgreSQL angepasst werden, weil
 Exceptions von Django zurückgegeben wurden, die auf Probleme mit dem Speichern
 und Auslesen von Daten zurückzuführen waren.
 
+Mit Hilfe der Django eigenen Administrationsoberfläche, die einfach als
+Applikation in der \emph{settings.py}\footnote{Datei beinhaltet alle
+Umgebungsvariablen des Projektes} installiert werden kann, können leicht die
+benötigten Einträge in die Datenbank geschrieben werden. Auch
+\emph{Datetime-Felder} werden erkannt und es werden spezielle Widgets für die
+Eintragung von Datenfeldern zur Verfügung gestellt. In dem Zusammenhang wurde
+entschienden, die benötigten Informationen über Skripte, automatisch befüllen zu
+lassen genaueres im Kapitel \ref{hilfsskripte} auf Seite \pageref{hilfsskripte}. 
+
 
 
 \section{Views}
+Die Geschäftslogik wird mit Hilfe der Views erstellt. Der Name ist hier etwas
+irreführend, weil man View mit der Ausgabe, also HTML verküpft. Die View ist die
+Schnittstelle, mit der die Anwendung mit dem Server/Client kommuniziert. Im
+wmTippspiel wird beim Aufruf der Startseite, automatisch die dafür zuständige
+View angesprochen. Diese führt Befehle aus, die ihre Ergenisse einem Template
+übergeben kann. Das Template generiert aus den übergebenen Informationen
+schließlich dann HTML, welches dem Server zur Weiterleitung an den Client zur
+Verfügung gestellt wird.
+
+In Django gibt es eine Kontrollinstanz, die ermöglicht, abhängig von der URL,
+auf die verschiedenen Views der Seite zu verweisen. Einstellungen können in der
+\emph{urls.py} gemacht werden. Mit Hilfe regulärer Audrücke wird die URL
+untersucht. Der erste Ausdruck auf dem die URL passt, ermittelt und
+die dahinterliegende View ausgeführt.
+
+\begin{lstlisting}[caption=Auszug ursl.py]{urls.py}
+urlpatterns = patterns('',
+    (r'^$', index ),
+    (r'^time/$', current_datetime ),
+    (r'^displaymeta/$', display_meta ),
+    #(r'^login/$', mylogin ),
+    (r'^accounts/logout/$', 'django.contrib.auth.views.logout', {'next_page':'/'}),
+    (r'^accounts/login/$', 'django.contrib.auth.views.login'),
+    # Example:
+    # (r'^wmTippspiel/', include('wmTippspiel.foo.urls')),
+
+    # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
+    # to INSTALLED_APPS to enable admin documentation:
+    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
+
+    # Uncomment the next line to enable the admin:
+    (r'^admin/', include(admin.site.urls)),
+    
+    (r'^tippspiel/', include('wmTippspiel.appWMTippspiel.urls')),
+    
+)
+\end{lstlisting}
+
+Im wmTippspiel wurde eine App\footnote{Eigenständiger Teil einer Webanwendung,
+kann in verschiedenen Projekten eingebunden werden} erstellt und ausgelagert, so
+kann die erstellte Applikation auch in anderen Internetseiten ohne viel Aufwand 
+eingbunden werden.
+
+\begin{lstlisting}
+(r'^tippspiel/', include('wmTippspiel.appWMTippspiel.urls')),
+\end{lstlisting}
+
+So bildet die appWMTippspiel die Kernapplikation der wmTippspiel-Projekts.
+
 \section{Registrierung}
 \section{Hilfsskripte}
+\label{hilfsskripte}
+
 \section{Templates}
 \section{Portierung auf Produktionsserver}
 \section{Fazit}
