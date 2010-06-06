@@ -249,11 +249,14 @@ eingbunden werden.
 (r'^tippspiel/', include('wmTippspiel.appWMTippspiel.urls')),
 \end{lstlisting}
 
-So bildet die appWMTippspiel die Kernapplikation der wmTippspiel-Projekts.
+Die appWMTippspiel bildet den Kern des wmTippspiel-Projekts. Daneben sind
+weitere Applikationen, wie eine Registrierungs-Applikation
+(siehe Kapitel \ref{registrierung}) denkbar, damit sich User bequem auf der
+Seite registrieren können. Diese Applikation kann thematisch gut von der appWMTippspiel abgegrenzt werden und in anderen Projekten eingesetzt
+werden. Was zu dem Don't repeat Yourself Gedankten Djangos passt.  
 
-\section{Registrierung}
-\section{Hilfsskripte}
-\label{hilfsskripte}
+\section{Registrierung}\label{registrierung}
+\section{Hilfsskripte}\label{hilfsskripte}
 
 \section{Templates}
 \section{Portierung auf Produktionsserver}
