@@ -17,6 +17,7 @@ Dieses Werk bzw. dieser Inhalt darf nicht bearbeitet, abgewandelt oder in andere
 
 
 
+
 Wobei gilt:
     *   Verzichtserklärung  — Jede der vorgenannten Bedingungen kann aufgehoben werden, sofern Sie die ausdrückliche Einwilligung des Rechteinhabers dazu erhalten.
     * Sonstige Rechte — Die Lizenz hat keinerlei Einfluss auf die folgenden Rechte:
