@@ -1,1 +1,29 @@
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Python Frameworks</span> von <a xmlns:cc="http://creativecommons.org/ns#" href="http://github.com/lennykey/latex/tree/master/diplomarbeit" property="cc:attributionName" rel="cc:attributionURL">Andres Cuartas</a> steht unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Namensnennung-Keine kommerzielle Nutzung-Weitergabe unter gleichen Bedingungen 3.0 Unported Lizenz</a>.<br />&#220;ber diese Lizenz hinausgehende Erlaubnisse k&#246;nnen Sie unter <a xmlns:cc="http://creativecommons.org/ns#" href="www.cuartas.de" rel="cc:morePermissions">www.cuartas.de</a> erhalten.
+Creative Commons: http://creativecommons.org/licenses/by-nc-nd/3.0/de/
+
+Sie dürfen:
+
+das Werk bzw. den Inhalt vervielfältigen, verbreiten und öffentlich zugänglich machen
+
+Zu den folgenden Bedingungen:
+
+Namensnennung — 
+Sie müssen den Namen des Autors/Rechteinhabers in der von ihm festgelegten Weise nennen.
+
+Keine kommerzielle Nutzung —
+Dieses Werk bzw. dieser Inhalt darf nicht für kommerzielle Zwecke verwendet werden.
+
+Keine Bearbeitung — 
+Dieses Werk bzw. dieser Inhalt darf nicht bearbeitet, abgewandelt oder in anderer Weise verändert werden.
+
+
+
+Wobei gilt:
+    *   Verzichtserklärung  — Jede der vorgenannten Bedingungen kann aufgehoben werden, sofern Sie die ausdrückliche Einwilligung des Rechteinhabers dazu erhalten.
+    * Sonstige Rechte — Die Lizenz hat keinerlei Einfluss auf die folgenden Rechte:
+          o Die gesetzlichen Schranken des Urheberrechts und sonstigen Befugnisse zur privaten Nutzung;
+          o Das Urheberpersönlichkeitsrecht des Rechteinhabers;
+          o Rechte anderer Personen, entweder am Lizenzgegenstand selber oder bezüglich seiner Verwendung, zum Beispiel Persönlichkeitsrechte abgebildeter Personen.
+    * Hinweis — Im Falle einer Verbreitung müssen Sie anderen alle Lizenzbedingungen mitteilen, die für dieses Werk gelten. Am einfachsten ist es, an entsprechender Stelle einen Link auf diese Seite einzubinden.
+
+    
+   
