@@ -1,8 +1,20 @@
 \BOOKMARK [1][-]{section.1}{Einf\374hrung}{}
 \BOOKMARK [1][-]{section.2}{Django}{}
 \BOOKMARK [1][-]{section.3}{Modelle}{}
+\BOOKMARK [2][-]{subsection.3.1}{Klassen}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{OR-Mapping}{section.3}
+\BOOKMARK [2][-]{subsection.3.3}{Administration}{section.3}
 \BOOKMARK [1][-]{section.4}{Views}{}
-\BOOKMARK [1][-]{section.5}{Registrierung}{}
+\BOOKMARK [2][-]{subsection.4.1}{Funktionalit\344t}{section.4}
+\BOOKMARK [2][-]{subsection.4.2}{URL-Dispatching}{section.4}
+\BOOKMARK [2][-]{subsection.4.3}{Django App}{section.4}
+\BOOKMARK [1][-]{section.5}{Login und Registrierung}{}
+\BOOKMARK [2][-]{subsection.5.1}{User-Authentifikation}{section.5}
+\BOOKMARK [2][-]{subsection.5.2}{Admin-Bereich f\374r das User-Management}{section.5}
+\BOOKMARK [2][-]{subsection.5.3}{Login-Werkzeug von Django}{section.5}
+\BOOKMARK [2][-]{subsection.5.4}{Logout bei Django}{section.5}
+\BOOKMARK [2][-]{subsection.5.5}{Registrierung}{section.5}
+\BOOKMARK [2][-]{subsection.5.6}{Passwort vergessen}{section.5}
 \BOOKMARK [1][-]{section.6}{Hilfsskripte}{}
 \BOOKMARK [1][-]{section.7}{Templates}{}
 \BOOKMARK [1][-]{section.8}{Portierung auf Produktionsserver}{}
