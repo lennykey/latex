@@ -1,0 +1,91 @@
+% Diplomarbeit  
+% FH Augsburg 
+%
+%
+%
+%
+%\documentclass[titlepage, 12pt,a4paper]{scrartcl}
+\documentclass[titlepage, 12pt, a4paper]{scrreprt}
+%\documentclass[titlepage, 12pt, a4paper]{scrbook}
+%scrartcl
+\usepackage[ngerman]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ucs}            % Eventuell benötigt
+\usepackage[utf8x]{inputenc}
+
+\usepackage{setspace}           % Paket fuer den Zeilenabstand
+\onehalfspacing                 % Setzt den Zeilenabstand auf 1.5
+
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[hyphens]{url}
+%\usepackage{breakurl}
+\usepackage{hyperref}
+\usepackage[usenames]{color}
+\definecolor{light-gray}{gray}{0.90}
+\usepackage[fixlanguage]{babelbib}
+\usepackage{listings}
+%\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt}
+%\lstset{language=Perl}
+\lstloadlanguages{bash,XML,HTML, PHP, Python}
+\selectbiblanguage{german}
+\usepackage{makeidx}
+%\usepackage{pifont}
+\makeindex
+%\usepackage{fancyhdr}
+%\setlength{\headheight}{15.2pt}
+%\pagestyle{fancy}
+
+
+\author{Jorge Andrés Cuartas Monroy}
+\title{- Diplomarbeit - \\ Python Frameworks \\}
+%\date{11-Dez-2007}
+
+\pagestyle{myheadings}
+\markright{Cuartas}
+\lstset{
+	inputencoding=utf8x,
+	extendedchars=\true,
+	language=Python,
+	basicstyle=\tiny,
+	keywordstyle=\bfseries\color{green},
+	identifierstyle=,
+	%commentstyle=\color{gray},	
+	%stringstyle=\itshape\color{darkred},
+	numbers=left,
+	numberstyle=\tiny,
+	stepnumber=1,
+	breaklines=true,
+	frame=none,
+	showstringspaces=false,
+	tabsize=4,
+	backgroundcolor=\color{light-gray},
+	captionpos=b,
+	float=htbp,
+	frameround=fttt
+}
+
+
+%\lstset{language=XML, stringstyle=\ttfamily, tabsize=2, basicstyle=\small, breaklines=true, backgroundcolor=\color{light-gray}, frameround=fttt}
+%              
+% WORKAROUND, damit lstlistoflistings funktioniert: 
+% Quelle: http://www.komascript.de/node/477
+%
+\makeatletter% --> De-TeX-FAQ
+\renewcommand*{\lstlistoflistings}{%
+  \begingroup
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \lol@heading
+    \setlength{\parskip}{\z@}%
+    \setlength{\parindent}{\z@}%
+    \setlength{\parfillskip}{\z@ \@plus 1fil}%
+    \@starttoc{lol}%
+    \if@restonecol\twocolumn\fi
+  \endgroup
+}
+\makeatother% --> \makeatletter 
