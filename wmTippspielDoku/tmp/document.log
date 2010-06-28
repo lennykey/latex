@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2010.5.31)  28 JUN 2010 16:18
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2010.5.31)  28 JUN 2010 16:55
 entering extended mode
  Source specials enabled.
  %&-line parsing enabled.
@@ -341,7 +341,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 115.
  [3]
-<pictures/klassen.png, id=139, 845.40843pt x 597.73312pt>
+<pictures/klassen.png, id=144, 845.40843pt x 597.73312pt>
 File: pictures/klassen.png Graphic file (type png)
 
 <use pictures/klassen.png>
@@ -374,30 +374,32 @@ Overfull \hbox (4.09464pt too wide) in paragraph at lines 327--330
  djan-go.contrib.auth.views.logout
  []
 
-[8] [9] (./document.aux) ) 
+[8] (/usr/share/texmf-texlive/tex/latex/ucs/utf8x.def
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+) [9] [10] (./document.aux) ) 
 Here is how much of TeX's memory you used:
- 6904 strings out of 94074
- 95126 string characters out of 1165153
+ 6919 strings out of 94074
+ 95387 string characters out of 1165153
  254540 words of memory out of 1500000
- 10008 multiletter control sequences out of 10000+50000
+ 10015 multiletter control sequences out of 10000+50000
  18703 words of font info for 41 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  35i,9n,44p,336b,1482s stack positions out of 5000i,500n,6000p,200000b,5000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t
-1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbx0600.pfb></usr/share/te
-xmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/publ
-ic/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800
-.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/tex
-mf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/publi
-c/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsl1200.
-pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share/texm
-f/fonts/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf/fonts/type1/public
-/cm-super/sfsx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx2488.p
-fb></usr/share/texmf/fonts/type1/public/cm-super/sfti0600.pfb></usr/share/texmf
-/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on document.pdf (9 pages, 353842 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-supe
+r-t1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbx0600.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0
+800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/
+texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/pu
+blic/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsl12
+00.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share/t
+exmf/fonts/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf/fonts/type1/pub
+lic/cm-super/sfsx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx248
+8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0600.pfb></usr/share/te
+xmf/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on document.pdf (10 pages, 359310 bytes).
 PDF statistics:
- 284 PDF objects out of 1000 (max. 8388607)
- 78 named destinations out of 1000 (max. 131072)
- 190 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 298 PDF objects out of 1000 (max. 8388607)
+ 84 named destinations out of 1000 (max. 131072)
+ 198 words of extra memory for PDF output out of 10000 (max. 10000000)
 

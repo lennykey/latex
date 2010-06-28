@@ -290,7 +290,7 @@ eingeloggte User sehen darf und solche, die jeder Besucher sehen darf
 (Admin-Bereich ist außen vor!). Hier reicht also auch nur eine einfache
 Prüfung,  welche Django selbst in der View-Datei per „Shortcut“ übernimmt:
 
-\begin{lstlisting}[caption=Hibernate]{Login decorator}
+\begin{lstlisting}[caption=Decorator]{Login decorator}
 @login_required
     def meinView(request):
     bspVar = 1 …
@@ -352,6 +352,37 @@ programmiert wurde.
 \section{Hilfsskripte}\label{hilfsskripte}
 
 \section{Templates}
+\subsection{Django Templatesprache}
+Django besitzt eine eigene Template-Sprache, die es ermöglichen soll, dass der 
+Designer unabhängig vom Programmierer mit der Implementierung des Layouts 
+beginnen kann. Über eine Schnittstelle übergibt Letzterer die benötigten 
+Variablen an das Template, wo sie der Designer positionieren kann. Hier tritt 
+ein grundlegendes Problem auf: zum Einen möchte der Designer bei jeder Seite 
+nicht das komplette Layout neu einbauen müssen, da er sonst im schlimmsten Fall
+bei einer Layoutänderung, z.B. Copyright-Rechtsbestimmungen erneuert, mehrere 
+hundert Dateien ändern müsste. Aus diesem Grund kann mit Hilfe der 
+Template-Sprache eine Basis-Datei angelegt werden, in der die inhaltlichen 
+Blöcke markiert werden, z.B.
+
+\begin{lstlisting}[caption=Beispiel]{Beispiel Block}
+{% block content %}
+<h1>Überschrift</h1>
+{% endblock %}
+\end{lstlisting}
+ 
+Nun kann man weitere Templates anlegen, die sich mit dieser Basis-Datei 
+erweitern, jedoch einen eigenen Content-Block besitzen und somit den alten
+Block  der Basis-Datei mit dem eigenen Inhalt ersetzen.
+
+Weiter muss eine Template-Sprache dem Nutzer vielfältige 
+Formatierungsmöglichkeiten bieten, welche dem Designer den Weg zu einer 
+dynamischen Seite ebnet. Ein Hilfsmittel sind die bekannten Tags, wie 
+IF-ELSE-Blocken und Schleifen, die Listen, Dictionaries oder Objekte auslesen. 
+Ein weiteres Hilfsmittel sind die Filter, die z.B. prüfen, ob die gewünschte 
+Variable existiert bzw. ein None oder False zurückgibt und dies dann mit 
+vorgegebenen Defaultwert ersetzen. Häufig werden auch Tag-Filter, benutzt, um 
+HTML-Tags zu beseitigen oder zu verändern.
+
 \section{Portierung auf Produktionsserver}
 \section{Fazit}
 
