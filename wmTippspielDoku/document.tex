@@ -138,6 +138,7 @@ und den Templates.
 
 
 \section{Modelle}
+\subsection{Klassen}
 Für die Anwendung stand zuerst die Erstellung der Klassen bzw. der
 Datenbankmodelle die benötigt werden, um die vorgestellten Ziele erreichen zu
 können. Folgende Klassen werden für die Anwendung benötigt. 
@@ -171,6 +172,7 @@ class Tipps(models.Model):
    
 \end{lstlisting}
 
+\subsection{OR-Mapping}
 Mit Hilfe des eingebauten OR-Mappers in Django können die Tabellen aus den
 vorher definierten Klassen als Tabellen in die Datenbank gespeichert werden.
 Die Speicherung bzw. Synchronisation geschieht mit Django eigenen Boardmitteln.
@@ -179,7 +181,7 @@ Die Speicherung bzw. Synchronisation geschieht mit Django eigenen Boardmitteln.
 python manage.py syncdb
 \end{lstlisting}
 
-Damit python mit der Datenbank kommunizieren kann muss vorher ein
+Damit Python mit der Datenbank kommunizieren kann muss vorher ein
 Datenbank-Connector installiert werden. Django unterstützt Oracle, PostgreSQL,
 MySQL und SQLite. Die Installation des Connectors ist abhängig von der
 Datenbank, die benutzt werden soll. Getestet wurden mySQL und PostgreSQL
@@ -190,6 +192,7 @@ Views\footnote{Django funktion} für PostgreSQL angepasst werden, weil
 Exceptions von Django zurückgegeben wurden, die auf Probleme mit dem Speichern
 und Auslesen von Daten zurückzuführen waren.
 
+\subsection{Administration}
 Mit Hilfe der Django eigenen Administrationsoberfläche, die einfach als
 Applikation in der \emph{settings.py}\footnote{Datei beinhaltet alle
 Umgebungsvariablen des Projektes} installiert werden kann, können leicht die
@@ -200,8 +203,8 @@ entschienden, die benötigten Informationen über Skripte, automatisch befüllen
 lassen genaueres im Kapitel \ref{hilfsskripte} auf Seite \pageref{hilfsskripte}. 
 
 
-
 \section{Views}
+\subsection{Funktionalität}
 Die Geschäftslogik wird mit Hilfe der Views erstellt. Der Name ist hier etwas
 irreführend, weil man View mit der Ausgabe, also HTML verküpft. Die View ist die
 Schnittstelle, mit der die Anwendung mit dem Server/Client kommuniziert. Im
@@ -211,6 +214,7 @@ View angesprochen. Diese führt Befehle aus, die ihre Ergenisse einem Template
 schließlich dann HTML, welches dem Server zur Weiterleitung an den Client zur
 Verfügung gestellt wird.
 
+\subsection{URL-Dispatching}
 In Django gibt es eine Kontrollinstanz, die ermöglicht, abhängig von der URL,
 auf die verschiedenen Views der Seite zu verweisen. Einstellungen können in der
 \emph{urls.py} gemacht werden. Mit Hilfe regulärer Audrücke wird die URL
@@ -240,6 +244,7 @@ urlpatterns = patterns('',
 )
 \end{lstlisting}
 
+\subsection{Django App}
 Im wmTippspiel wurde eine App\footnote{Eigenständiger Teil einer Webanwendung,
 kann in verschiedenen Projekten eingebunden werden} erstellt und ausgelagert, so
 kann die erstellte Applikation auch in anderen Internetseiten ohne viel Aufwand 
@@ -252,10 +257,98 @@ eingbunden werden.
 Die appWMTippspiel bildet den Kern des wmTippspiel-Projekts. Daneben sind
 weitere Applikationen, wie eine Registrierungs-Applikation
 (siehe Kapitel \ref{registrierung}) denkbar, damit sich User bequem auf der
-Seite registrieren können. Diese Applikation kann thematisch gut von der appWMTippspiel abgegrenzt werden und in anderen Projekten eingesetzt
-werden. Was zu dem Don't repeat Yourself Gedankten Djangos passt.  
+Seite registrieren können. Diese Applikation kann thematisch gut von der 
+appWMTippspiel abgegrenzt werden und in anderen Projekten eingesetzt werden. 
+Was zu dem Don't repeat Yourself Gedankten Djangos passt.
 
-\section{Registrierung}\label{registrierung}
+\section{Login und Registrierung}\label{registrierung}
+\subsection{User-Authentifikation}
+In unserem Projekt stellte sich das User-Authentifikation-System als eines der
+drei größeren UseCases heraus. Wichtig erschien uns, dass der Besucher beim 
+ersten Besuch ohne großen Zeitaufwand einen Account erstellen kann und dann 
+gleich mit Tippen loslegen kann, also eine Registrierung mit automatischem 
+Login. Später, bei jedem weiteren Besuch, erfolgt dann der gewohnte Login per 
+Username und Passwort. Da die Registrierung, auch aufgrund unseres Layouts, 
+nicht mit einem zweiten Passwortkontrollfeld ausgestattet ist, musste
+zusätzlich noch eine „Passwort vergessen?“-Funktionalität eingebaut werden.
+
+Die Arbeit mit dem Web-Framework Django ermöglichte nun den Einsatz des 
+Framework eigenen Authentifizierung-Werkzeuges, zu dem hier zunächst ein
+kleiner Einblick zu der Arbeitsweise gegeben werden soll. Django setzt dabei
+auf eine User-Session mit Cookie zur Speicherung der Session-ID, ein Verfahren,
+das mittlerweile bei so ziemlich jedem Framework oder CMS Standard ist. Als 
+Aufgabenfelder dienen die Verwaltung von User, Gruppen und deren
+Berechtigungen. Da wir in unserem Projekt nur die Gruppierungen der normalen 
+User und Superuser (nur für auto-generierten Admin-Bereich) benutzen und selbst
+keine eigenen Gruppen anlegen, wird hier nur das User-Model vorgestellt. Im
+Grunde genommen benötigen wir für dieses nur die User-Daten Username, Passwort,
+Emailadresse und ein paar versteckte Daten, wie „is\_active“, „last\_login“,
+etc. So gesehen, reicht uns also das Django eigene User-Model völlig aus und 
+kann gleich so übernommen werden. Auch bei den Berechtigungen kommen wir relativ 
+spartanisch zurecht, weil wir nur zwischen Inhalten unterscheiden, die der 
+eingeloggte User sehen darf und solche, die jeder Besucher sehen darf 
+(Admin-Bereich ist außen vor!). Hier reicht also auch nur eine einfache
+Prüfung,  welche Django selbst in der View-Datei per „Shortcut“ übernimmt:
+
+\begin{lstlisting}[caption=Hibernate]{Login decorator}
+@login_required
+    def meinView(request):
+    bspVar = 1 …
+\end{lstlisting}
+
+\subsection{Admin-Bereich für das User-Management}
+Zuallererst eine gute Nachricht: das Entwickeln des Admin-Bereichs  (eine
+aufwendige Aufgabe, deren Mühen der normale Besucher nicht würdigt) kann man 
+sich mit Django getrost sparen. Es generiert automatisch für jedes erstellte 
+Model gewünschte Formulare in einem geschützten Admin-Bereich, der nur für die 
+oben angesprochenen Superuser zugänglich ist. Einzelne Änderungen der Formulare
+oder Bedienbarkeit können mit Hilfe der Django Online-Dokumentation schnell 
+gemacht werden, meistens sind sie aber nicht von Nöten.
+
+
+\subsection{Login-Werkzeug von Django}
+Auch beim Erstellen eines Logins kann man sich im Großen und Ganzen auf die 
+Bibliothek django.contrib.auth.views.login verlassen.. Dies kann ganz einfach 
+direkt in der url.py aufgerufen werden, wahlweise mit einem Template oder auch 
+ganz spartanisch ohne. Hat man sich für ein Template entschieden, ist es hier 
+möglich sich die Input-Felder (HTML) per Django's eigener Template-Sprache 
+generieren zu lassen, oder, wie wir es gemacht haben, selbst mit HTML zu 
+erstellen. Dies ermöglichte uns einen schnelleren Zugriff auf die Attribute des
+Input-Feldes, da wir Änderungen aus layouttechnischen Gründen benötigten. Ein 
+interessantes Feature bietet die „next“-Funktion des Logins, die als 
+GET-Parameter übergeben, dem Besucher besseres Navigieren erlaubt: z.B. möchte 
+der nicht eingeloggte User in der Galerie ein Bild betrachten. Dies ist jedoch 
+nur authentifizierten Usern gestattet. Deshalb wird ein next-Parameter 
+mitgegeben, in welchem die Adresse zu dem Bild gespeichert wird, damit er nach 
+erfolgreichem Login dort auch landet.
+
+
+\subsection{Logout bei Django}
+Für den Logout reicht ebenfalls die vorgegeben Funktion 
+django.contrib.auth.views.logout in der urls.py einzustellen, da sie ja kein 
+eigenes Template oder besondere Einstellungen bedarf.
+
+
+\subsection{Registrierung}
+Für die Registrierung selbst gibt es allerdings keine Hilfen seitens Django, da
+sie meist eine sehr individuelle Sache ist, z.B. möchte man bei einer Webshop 
+Kontodaten, bei einer Online-Community vielleicht Geburtsdatum und Hobbies usw.
+wissen. Auch bieten sich hier besondere Sicherungsmöglichkeiten wie Captcha
+etc.  an, was wir allerdings für unser kleines Tippspiel aufgrund der geringen 
+Laufzeit nicht benötigten. Da wir einen schnellen Einstieg für den Teilnehmer 
+uns wünschten, verzichteten wir außerdem auf eine Aktivierungsemail und loggten
+den User sofort nach der Registrierung ein.
+
+\subsection{Passwort vergessen}
+Da eine erleichterte Registrierung schnell zu fehlerhaften bzw. vergessenen 
+Passwörtern führen kann, wurde noch eine „Passwort vergessen“-Funktion 
+eingeführt, die dem Teilnehmer nach dem Eintragen seiner E-mailadresse, sein 
+neues, zufallsgenerierte Passwort zuschickt. Bei der Entwicklung dieser
+Funktion  kann man sich auch hier wieder auf Django verlassen, das ein Werkzeug
+zum E-mail versenden anbietet, als auch eine Funktion zur Erstellung von 
+zufälligen Passwörtern, was jedoch bei uns selbst durch ein kleinen Einzeiler 
+programmiert wurde.
+
 \section{Hilfsskripte}\label{hilfsskripte}
 
 \section{Templates}
