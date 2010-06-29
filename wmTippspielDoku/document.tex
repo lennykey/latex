@@ -350,6 +350,47 @@ zufälligen Passwörtern, was jedoch bei uns selbst durch ein kleinen Einzeiler
 programmiert wurde.
 
 \section{Hilfsskripte}\label{hilfsskripte}
+\subsection{Auslesen der Mannschaften}
+Um die teilnehmenden Mannschaften nicht alle von Hand in die Datenbank
+eintragen  zu müssen haben wir ein Skript geschrieben, dass mit BeautifulSoup 
+den Quelltext der Fifa Homepage 
+(http://de.fifa.com/worldcup/standings/index.html) einliest, die relevanten 
+Informationen extrahiert und damit die Datenbank füllt. Dabei hat sich 
+herausgestellt, dass BeautifulSoup nicht ganz so flexibel ist, wie es 
+wünschenswert gewesen wäre. So sind die Informationen auf der Seite der Fifa 
+z.B. in einer Tabelle angeordnet. Dabei wären Selektoren wie sie bei CSS3 
+vorkommen wünschenswert gewesen (z.B. 'tr td.l a strong'). So war es z.B. nicht
+möglich eine Tabellenzelle ausgehend von der Klasse der Zeile zu selektieren. 
+Dies hätte das ganze dynamischer gemacht und wäre auch mit einem leicht 
+veränderten Design von Seiten der Fifa zurecht gekommen. Da dies nicht möglich 
+ist haben wir die Pfade "statisch" aufgebaut, was das Skript natürlich schlecht
+wiederverwendbar macht, da man für jede neue Seite die Pfade komplett neu 
+aufbauen muss. Eine Alternative wäre hierbei lxml gewesen. Dort wird 
+CSS3-Selektor Unterstützung versprochen. Das Problem dabei ist nur, dass lxml 
+ein Pythonic binding für die Bibliotheken "libxml2" und "libxslt" ist. Diese 
+Bibliotheken laufen allerdings unter C und da wir im "pure Python" soweit wie 
+möglich bleiben wollten, haben wir uns (auch der Einfachheit halber um nicht 
+noch einen Parser "lernen" zu müssen) für BeautifulSoup entschieden. Dieses 
+Skript wurde vor dem offiziellen Start des Tippspiels einmal zum Befüllen der 
+Datenbank ausgeführt.
+
+\subsection{Auslesen der Spiel-Ergebnisse}
+Das Auslesen der Mannschaften per Skript zu realisieren war nur eine kleine 
+Erleichterung, da es nur einmal ausgeführt wurde. Da wir aber nun schon ein 
+Skript haben, welches mit der Struktur der Fifa Seite vertraut ist, haben wir 
+dieses Skript angepasst um die Ergebnisse der Spiele auszulesen  (von
+http://de.fifa.com/worldcup/matches/index.html). Interessant hierbei war, dass 
+bei manchen Spielen ein Halbzeitergebnis angegeben wurde und bei anderen nicht.
+Dieses stand allerdings in der gleichen Tabellenzeile wie das "normale" 
+Ergebnis. Mit Hilfe von string.find() und anderen String-Funktionen konnten wir
+dies jedoch relativ zuverlässig filtern. Zur Identifikation der Spiele zogen
+wir  das Datum samt Uhrzeit heran, was allerdings zu einem Problem wurde, als 
+mehrere Spiele zur gleichen Zeit stattfanden. Hier musste noch auf die 
+jeweiligen Mannschaften ausgewichen werden. Das grundlegende Problem besteht 
+nunmal darin die Daten der Homepage mit denen der Datenbank abzustimmen und 
+entsprechend zu updaten. Um das Skript nicht nach jedem Spiel per Hand
+ausführen  zu müssen, haben wir einen Cronjob geschrieben, der das Skript in 
+regelmäßigen Abständen ausführt und so die aktuellen Ergebnisse einpflegt.
 
 \section{Templates}
 \subsection{Django Templatesprache}
@@ -383,8 +424,18 @@ Variable existiert bzw. ein None oder False zurückgibt und dies dann mit
 vorgegebenen Defaultwert ersetzen. Häufig werden auch Tag-Filter, benutzt, um 
 HTML-Tags zu beseitigen oder zu verändern.
 
-\section{Portierung auf Produktionsserver}
+%\section{Portierung auf Produktionsserver}
 \section{Fazit}
+Das Erstellen des WMTippspiel hat viel Spaß gemacht aber hat auch auf der
+anderen Seite viel Zeit in Anspruch genommen. Aufgrund der Aktualität zur
+Weltmeisterschaft war es super zu sehen, wie die User der Anwendung
+mitgefiebert haben und der Seite treu geblieben sind. Die Arbeit mit Django ging
+reibungslos nur die Portierung auf dem Produnktionsserver hat etwas Zeit in 
+Anspruch genommen. Da etwas Aufwand von Nöten war Apache und WSGI mit der 
+Anwendung kommunizieren zu lassen. Aber nach anfänglichen Hürden stand das 
+Projekt online.
 
-
+Wir haben noch viele Ideen für die Anwendung, doch aus Zeitgründen konnten
+nicht alle Ideen umgesetzt werden. Die Ideen nehmen wir mit und vielleicht
+entsteht aus dem Projekt ein Bundesliga-Tippspiel für die nächste Saison. 
 \end{document}
