@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2010.5.31)  30 JUN 2010 09:46
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2010.5.31)  30 JUN 2010 23:55
 entering extended mode
  Source specials enabled.
  %&-line parsing enabled.
@@ -648,12 +648,12 @@ Kapitel 2.
 File: pictures/klassen.png Graphic file (type png)
 
 <use pictures/klassen.png>
-Underfull \hbox (badness 10000) in paragraph at lines 157--163
+Underfull \hbox (badness 10000) in paragraph at lines 157--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--163
+Underfull \hbox (badness 10000) in paragraph at lines 157--164
 
  []
 
@@ -664,14 +664,7 @@ File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 ]
 (/usr/share/texmf-texlive/tex/latex/ucs/utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
-) [5 <./pictures/klassen.png>]
-
-LaTeX Warning: Reference `hilfsskripte' on page 6 undefined on input line 206.
-
-
-LaTeX Warning: Reference `hilfsskripte' on page 6 undefined on input line 206.
-
-[6]
+) [5 <./pictures/klassen.png>] [6]
 Kapitel 3.
 (/usr/share/texmf-texlive/tex/latex/ucs/utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
@@ -682,7 +675,7 @@ File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 )
 
-LaTeX Warning: Reference `registrierung' on page 8 undefined on input line 261.
+LaTeX Warning: Reference `registrierung' on page 8 undefined on input line 263.
 
 
 [8]
@@ -692,9 +685,9 @@ File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 ) [9
 
 ]
-Overfull \hbox (4.09464pt too wide) in paragraph at lines 329--332
-[]\T1/cmr/m/n/12 Für den Lo-gout reicht eben-falls die vor-ge-ge-ben Funk-ti-on
- djan-go.contrib.auth.views.logout
+Overfull \hbox (21.78062pt too wide) in paragraph at lines 331--334
+[]\T1/cmr/m/n/12 Für den Lo-gout reicht es eben-falls die vor-ge-ge-be-ne Funk-
+ti-on djan-go.contrib.auth.views.logout
  []
 
 [10] [11]
@@ -711,6 +704,8 @@ File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 Kapitel 7.
 [15
 
+] [16
+
 ] (./document.aux (./parts/titlepage.aux))
 
 LaTeX Font Warning: Size substitutions with differences
@@ -721,10 +716,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7287 strings out of 94074
- 99478 string characters out of 1165153
+ 7303 strings out of 94074
+ 99685 string characters out of 1165153
  251075 words of memory out of 1500000
- 10344 multiletter control sequences out of 10000+50000
+ 10352 multiletter control sequences out of 10000+50000
  21669 words of font info for 43 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  39i,8n,44p,358b,1504s stack positions out of 5000i,500n,6000p,200000b,5000s
@@ -743,9 +738,9 @@ uper/sfsx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1728.pfb></
 usr/share/texmf/fonts/type1/public/cm-super/sfsx2488.pfb></usr/share/texmf/font
 s/type1/public/cm-super/sfti0600.pfb></usr/share/texmf/fonts/type1/public/cm-su
 per/sfti1200.pfb>
-Output written on document.pdf (15 pages, 432469 bytes).
+Output written on document.pdf (16 pages, 435014 bytes).
 PDF statistics:
- 346 PDF objects out of 1000 (max. 8388607)
- 91 named destinations out of 1000 (max. 131072)
+ 360 PDF objects out of 1000 (max. 8388607)
+ 99 named destinations out of 1000 (max. 131072)
  219 words of extra memory for PDF output out of 10000 (max. 10000000)
 

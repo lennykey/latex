@@ -104,47 +104,47 @@
 Im Rahmen der Vorlesung „Internetprogrammierung mit Python“ ist eine
 Studienarbeit zu erstellen. Aus mehreren zur Auswahl stehenden Arbeiten ist die
 Wahl auf „Fußball-Tippspiel“ gefallen. Die Aufgabe darf im Team bearbeitet
-werden mit maximal drei Gruppenmitgliedern. Aus aktuellem Anlaß wird die
+werden mit maximal drei Gruppenmitgliedern. Aus aktuellem Anlass wird die
 Anwendug ein Fußball-WM Tippspiel mit der Möglichkeit auf die Begegnungen zu
 tippen und für richtige Tipps, Differenz oder Tendenz Punkte zu erhalten. Die
-Anwendung soll darüberhinaus noch ermöglichen einzusehen wieviele Punkte der
-User momentan hat und auf welchen Platz er steht.
+Anwendung soll es darüber hinaus ermöglichen, einzusehen wieviel Punkte der
+User momentan hat und auf welchem Platz er steht. Darüberhinaus soll er die
+Möglichkeit haben, abgelaufene Tipps anderer Spieler einzusehen.
 
-Bei der Überlegung zur Wahl geeigneter Werkzueuge zur Erstellung der Anwendung,
-standen unter anderem Zope, Turbogears, Pylons und Django in der engeren
-Auswahl.
+Als Basis für die Anwendung standen folgende Framework zur Auswahl: Zope,
+Turbogears, Pylons und Django in der engeren Auswahl.
 
-Für die Auswahl geeigneter Werkzeuge sind folgende Punkte wichtig.
-Arbeiten mit bekannten Techniken/Komponenten wie Python, mySQl,
+Für die Auswahl des geeigneten Frameworks sind folgende Punkte relevant:
+arbeiten mit bekannten Techniken/Komponenten wie Python, MySQl,
 ORM\footnote{Objekt-Relational Mapping}, HTML, JavaScript und Apache. 
-Darüberhinaus sollte die Einarbeitungszeit nicht zu groß sein, da aus
-Erfahrung, das Einarbeiten in neue Frameworks zeitaufwändig ist. Somit ist eine
-gute Dokumentation ein weiterer wichtiger Punkt für die Auswahl.
+Darüber hinaus sollte die Einarbeitungszeit nicht zu lang sein, da - wie wir aus
+Erfahrung wissen - das Einarbeiten in neue Frameworks zeitaufwendig ist. Somit 
+ist eine gute Dokumentation ein weiterer wichtiger Punkt für die Auswahl.
 
 Mit allen oben erwähnten Frameworks kommt man sicher schnell und einfach ans
-Ziel. Letzenlich fiel die Wahl auf Django, da dieses Framework eine recht
-schnelle Entwicklung für unsere Studienarbeit verspricht. Unter anderem sticht
-die einfache Userverwaltung, der schnell zu konfigurierbare Adminbereich der
-zur Verfügunggestellt wird, der OR-Mapper, das Templatesystem und der DRY: Don't
-repeat yourself Ansatz. 
+Ziel. Letzendlich fiel die Wahl auf Django, da dieses Framework eine recht
+schnelle Entwicklung für unsere Studienarbeit versprach. Unter anderem sticht
+die einfache Userverwaltung, der schnell zu konfigurierende Adminbereich, der
+zur Verfügung gestellt wird, der OR-Mapper, das Templatesystem und der DRY: 
+Don't repeat yourself Ansatz heraus. 
 
 \chapter{Web Framework}
 \section{Django}
 Das Django Webframework eignet sich für die Erstellung von Webanwendungen. Es
-folgt dem MVC\footnote{Model View Control} Muster. Wobei bei Django die Modelle
-der Anwendung, die Objekte mit denen Django arbeitet mit Hilfe von OR-Mapping
-in entweder mySQL, PostgreSQL, Oracle oder SQLite gespeichert werden können. So
-wird die Datenpersistenz der Anwendung gewährleistet. Für die View sind
-Templates zuständig, die mit Hilfe einer eigener Templatesprache konfiguriert
-werden. Die Schnittstelle nach außen zum Server bieten die views (nicht zu
-verwechseln mit der View), die die Kontrolle über die Anwendung bieten. Diese
-beinhalten die Geschäftslogik und dienen als Verbindung zwischen den Modellen
-und den Templates.
+folgt dem MVC\footnote{Model View Control} Muster. Bei Django können die Modelle
+der Anwendung, die Objekte mit denen Django arbeitet, mit Hilfe von OR-Mapping
+in der Datenbank gespeichert werden. So wird die Datenpersistenz der Anwendung
+gewährleistet. Außerdem unterstützt Django mit MySQL, PostgreSQL, Oracle und 
+SQLite die wichtigsten Datenbanken. Für die View sind Templates zuständig, die 
+mit Hilfe einer eigenen Templatesprache konfiguriert werden. Die Schnittstelle 
+nach außen zum Server bieten die Views.py an (dabei handelt es sich, um den 
+Controller im MVC-Muster!), die die Anwendung steuern. Diese beinhalten die 
+Geschäftslogik und dienen als Verbindung zwischen den Modellen und den Templates.
 
 \section{Klassen}
 Für die Anwendung stand zuerst die Erstellung der Klassen bzw. der
-Datenbankmodelle die benötigt werden, um die vorgestellten Ziele erreichen zu
-können. Folgende Klassen werden für die Anwendung benötigt. 
+Datenbankmodelle im Vordergrund, da sie das Fundament unserer Anwendung 
+darstellen. Folgende Klassen werden für die Anwendung benötigt:
 
 \begin{figure}[ht]
  \begin{center}
@@ -156,8 +156,9 @@ können. Folgende Klassen werden für die Anwendung benötigt.
 
 Im Zentrum stehen die Tipps, welche die User abgeben können. Die Tipps setzen
 sich zusammen aus den einzelnen Usern (Tipper) und den Spielbegegnungen. In
-diesem Fall die Spiele der WM 2010. Weiterhin setzen sich diese aus Den
-Mannschaften und weiteren Informationen, wie Spielzeit den Ergebnissen zusammen.
+diesem Fall die Spiele der WM 2010. Weiterhin setzen sich diese aus den
+Mannschaften und weiteren Informationen wie Datum des Spiels und den
+Ergebnissen zusammen.
 \\
 \\
 
@@ -178,21 +179,20 @@ class Tipps(models.Model):
 \section{OR-Mapping}
 Mit Hilfe des eingebauten OR-Mappers in Django können die Tabellen aus den
 vorher definierten Klassen als Tabellen in die Datenbank gespeichert werden.
-Die Speicherung bzw. Synchronisation geschieht mit Django eigenen Boardmitteln.
+Die Speicherung bzw. Synchronisation geschieht mit Django eigenen Bordmitteln.
 
 \begin{lstlisting}[caption=Datenbanksynchronisation]{sync}
 python manage.py syncdb
 \end{lstlisting}
 
-Damit Python mit der Datenbank kommunizieren kann muss vorher ein
-Datenbank-Connector installiert werden. Django unterstützt Oracle, PostgreSQL,
-MySQL und SQLite. Die Installation des Connectors ist abhängig von der
-Datenbank, die benutzt werden soll. Getestet wurden mySQL und PostgreSQL
-hierbei bei der lokalen Entwicklung unter Ubuntu mySQL und auf dem
-Produktionsserver Postgres. Bei der Speicherung und Auslesen der Daten erwies
-sich mySQL toleranter, für den Produktionsserver mussten drei
+Damit Python mit der Datenbank kommunizieren kann, muss vorher ein
+Datenbank-Connector installiert werden. Die Installation des Connectors ist 
+abhängig von der Datenbank, die benutzt werden soll. Getestet wurden MySQL und 
+PostgreSQL. Bei der lokalen Entwicklung unter Ubuntu MySQL und auf dem 
+Produktionsserver PostgreSQL. Bei der Speicherung und dem Auslesen der Daten 
+erwies sich MySQL toleranter. Für den Produktionsserver mussten drei 
 Views\footnote{Django funktion} für PostgreSQL angepasst werden, weil
-Exceptions von Django zurückgegeben wurden, die auf Probleme mit dem Speichern
+Exceptions von Django zurückgegeben wurden, die auf Probleme mit dem Speichern 
 und Auslesen von Daten zurückzuführen waren.
 
 \section{Administration}
@@ -202,25 +202,27 @@ Umgebungsvariablen des Projektes} installiert werden kann, können leicht die
 benötigten Einträge in die Datenbank geschrieben werden. Auch
 \emph{Datetime-Felder} werden erkannt und es werden spezielle Widgets für die
 Eintragung von Datenfeldern zur Verfügung gestellt. In dem Zusammenhang wurde
-entschienden, die benötigten Informationen über Skripte, automatisch befüllen zu
-lassen genaueres im Kapitel \ref{hilfsskripte} auf Seite \pageref{hilfsskripte}. 
+entschieden, die benötigten Informationen über Skripte, automatisch befüllen zu
+lassen. Genaueres im Kapitel \ref{hilfsskripte} auf Seite
+\pageref{hilfsskripte}.
 
 \chapter{Implementierung}
 \section{Views}
 Die Geschäftslogik wird mit Hilfe der Views erstellt. Der Name ist hier etwas
-irreführend, weil man View mit der Ausgabe, also HTML verküpft. Die View ist die
-Schnittstelle, mit der die Anwendung mit dem Server/Client kommuniziert. Im
-wmTippspiel wird beim Aufruf der Startseite, automatisch die dafür zuständige
-View angesprochen. Diese führt Befehle aus, die ihre Ergenisse einem Template
-übergeben kann. Das Template generiert aus den übergebenen Informationen
-schließlich dann HTML, welches dem Server zur Weiterleitung an den Client zur
+irreführend, weil man View mit der Ausgabe (dem View im MVC-Muster, das wir
+hier "Template" nennen), also HTML verküpft. Die View ist aber die
+Schnittstelle durch die die Anwendung mit dem Server/Client kommuniziert. Im 
+wmTippspiel wird beim Aufruf der Startseite automatisch die dafür zuständige 
+View angesprochen. Diese führt Befehle aus, die ihre Ergenisse einem Template 
+übergeben können. Das Template generiert aus den übergebenen Informationen dann
+schließlich HTML, welches dem Server zur Weiterleitung an den Client zur 
 Verfügung gestellt wird.
 
 \section{URL-Dispatching}
-In Django gibt es eine Kontrollinstanz, die ermöglicht, abhängig von der URL,
+In Django gibt es eine Kontrollinstanz, die es ermöglicht, abhängig von der URL,
 auf die verschiedenen Views der Seite zu verweisen. Einstellungen können in der
 \emph{urls.py} gemacht werden. Mit Hilfe regulärer Audrücke wird die URL
-untersucht. Der erste Ausdruck auf dem die URL passt, ermittelt und
+untersucht, der erste Ausdruck, auf den die URL passt, ermittelt und
 die dahinterliegende View ausgeführt.
 
 \begin{lstlisting}[caption=Auszug ursl.py]{urls.py}
@@ -248,9 +250,9 @@ urlpatterns = patterns('',
 
 \section{Django App}
 Im wmTippspiel wurde eine App\footnote{Eigenständiger Teil einer Webanwendung,
-kann in verschiedenen Projekten eingebunden werden} erstellt und ausgelagert, so
+kann in verschiedenen Projekten eingebunden werden} erstellt und ausgelagert. So
 kann die erstellte Applikation auch in anderen Internetseiten ohne viel Aufwand 
-eingbunden werden.
+eingebunden werden.
 
 \begin{lstlisting}
 (r'^tippspiel/', include('wmTippspiel.appWMTippspiel.urls')),
@@ -260,26 +262,26 @@ Die appWMTippspiel bildet den Kern des wmTippspiel-Projekts. Daneben sind
 weitere Applikationen, wie eine Registrierungs-Applikation
 (siehe Kapitel \ref{registrierung}) denkbar, damit sich User bequem auf der
 Seite registrieren können. Diese Applikation kann thematisch gut von der 
-appWMTippspiel abgegrenzt werden und in anderen Projekten eingesetzt werden. 
-Was zu dem Don't repeat Yourself Gedankten Djangos passt.
+appWMTippspiel abgegrenzt und in anderen Projekten eingesetzt werden. Was zu
+dem Don't repeat Yourself Gedankten Djangos passt.
 
 \chapter{Zugangsmechanismus}
 \section{User-Authentifikation}
 In unserem Projekt stellte sich das User-Authentifikation-System als eines der
 drei größeren UseCases heraus. Wichtig erschien uns, dass der Besucher beim 
-ersten Besuch ohne großen Zeitaufwand einen Account erstellen kann und dann 
-gleich mit Tippen loslegen kann, also eine Registrierung mit automatischem 
+ersten Besuch ohne großen Zeitaufwand einen Account erstellen und dann 
+gleich mit dem Tippen loslegen kann. Also eine Registrierung mit automatischem 
 Login. Später, bei jedem weiteren Besuch, erfolgt dann der gewohnte Login per 
 Username und Passwort. Da die Registrierung, auch aufgrund unseres Layouts, 
 nicht mit einem zweiten Passwortkontrollfeld ausgestattet ist, musste
 zusätzlich noch eine „Passwort vergessen?“-Funktionalität eingebaut werden.
 
 Die Arbeit mit dem Web-Framework Django ermöglichte nun den Einsatz des 
-Framework eigenen Authentifizierung-Werkzeuges, zu dem hier zunächst ein
-kleiner Einblick zu der Arbeitsweise gegeben werden soll. Django setzt dabei
-auf eine User-Session mit Cookie zur Speicherung der Session-ID, ein Verfahren,
+Framework eigenen Authentifizierungs-Werkzeuges, zu dem hier zunächst ein
+kleiner Einblick der Arbeitsweise gegeben werden soll. Django setzt dabei
+auf eine User-Session mit Cookie zur Speicherung der Session-ID. Ein Verfahren,
 das mittlerweile bei so ziemlich jedem Framework oder CMS Standard ist. Als 
-Aufgabenfelder dienen die Verwaltung von User, Gruppen und deren
+Aufgabenfelder dient die Verwaltung von Usern, Gruppen und deren
 Berechtigungen. Da wir in unserem Projekt nur die Gruppierungen der normalen 
 User und Superuser (nur für auto-generierten Admin-Bereich) benutzen und selbst
 keine eigenen Gruppen anlegen, wird hier nur das User-Model vorgestellt. Im
@@ -289,8 +291,8 @@ etc. So gesehen, reicht uns also das Django eigene User-Model völlig aus und
 kann gleich so übernommen werden. Auch bei den Berechtigungen kommen wir relativ 
 spartanisch zurecht, weil wir nur zwischen Inhalten unterscheiden, die der 
 eingeloggte User sehen darf und solche, die jeder Besucher sehen darf 
-(Admin-Bereich ist außen vor!). Hier reicht also auch nur eine einfache
-Prüfung,  welche Django selbst in der View-Datei per „Shortcut“ übernimmt:
+(Admin-Bereich ist außen vor!). Hier reicht also auch eine einfache
+Prüfung aus, welche Django selbst in der View-Datei per Decorator übernimmt:
 
 \begin{lstlisting}[caption=Decorator]{Login decorator}
 @login_required
@@ -299,100 +301,101 @@ Prüfung,  welche Django selbst in der View-Datei per „Shortcut“ übernimmt:
 \end{lstlisting}
 
 \section{Admin-Bereich für das User-Management}
-Zuallererst eine gute Nachricht: das Entwickeln des Admin-Bereichs  (eine
+Zuallererst eine gute Nachricht: das Entwickeln des Admin-Bereichs (eine
 aufwendige Aufgabe, deren Mühen der normale Besucher nicht würdigt) kann man 
 sich mit Django getrost sparen. Es generiert automatisch für jedes erstellte 
 Model gewünschte Formulare in einem geschützten Admin-Bereich, der nur für die 
 oben angesprochenen Superuser zugänglich ist. Einzelne Änderungen der Formulare
 oder Bedienbarkeit können mit Hilfe der Django Online-Dokumentation schnell 
-gemacht werden, meistens sind sie aber nicht von Nöten.
+erledigt werden, meistens sind sie aber nicht von Nöten.
 
 
 \section{Login-Werkzeug von Django}
 Auch beim Erstellen eines Logins kann man sich im Großen und Ganzen auf die 
-Bibliothek django.contrib.auth.views.login verlassen.. Dies kann ganz einfach 
+Bibliothek django.contrib.auth.views.login verlassen. Dies kann ganz einfach 
 direkt in der url.py aufgerufen werden, wahlweise mit einem Template oder auch 
 ganz spartanisch ohne. Hat man sich für ein Template entschieden, ist es hier 
-möglich sich die Input-Felder (HTML) per Django's eigener Template-Sprache 
-generieren zu lassen, oder, wie wir es gemacht haben, selbst mit HTML zu 
+möglich, sich die Input-Felder (HTML) per Django's eigener Template-Sprache 
+generieren zu lassen. Oder, wie wir es gemacht haben, selbst mit HTML zu 
 erstellen. Dies ermöglichte uns einen schnelleren Zugriff auf die Attribute des
-Input-Feldes, da wir Änderungen aus layouttechnischen Gründen benötigten. Ein 
-interessantes Feature bietet die „next“-Funktion des Logins, die als 
+Input-Feldes, da wir Änderungen daran aus layouttechnischen Gründen benötigten.
+Ein interessantes Feature bietet die „next“-Funktion des Logins, die, als 
 GET-Parameter übergeben, dem Besucher besseres Navigieren erlaubt: z.B. möchte 
 der nicht eingeloggte User in der Galerie ein Bild betrachten. Dies ist jedoch 
 nur authentifizierten Usern gestattet. Deshalb wird ein next-Parameter 
 mitgegeben, in welchem die Adresse zu dem Bild gespeichert wird, damit er nach 
-erfolgreichem Login dort auch landet.
+erfolgreichem Login auf die gewünschte Seite weitergeleitet wird.
 
 
 \section{Logout bei Django}
-Für den Logout reicht ebenfalls die vorgegeben Funktion 
-django.contrib.auth.views.logout in der urls.py einzustellen, da sie ja kein 
-eigenes Template oder besondere Einstellungen bedarf.
+Für den Logout reicht es ebenfalls die vorgegebene Funktion 
+django.contrib.auth.views.logout in der urls.py einzustellen, da sie kein 
+eigenes Template oder besondere Einstellungen benötigt.
 
 
 \section{Registrierung}
 Für die Registrierung selbst gibt es allerdings keine Hilfen seitens Django, da
-sie meist eine sehr individuelle Sache ist, z.B. möchte man bei einer Webshop 
+sie meist eine sehr individuelle Sache ist, z.B. möchte man bei einem Webshop 
 Kontodaten, bei einer Online-Community vielleicht Geburtsdatum und Hobbies usw.
-wissen. Auch bieten sich hier besondere Sicherungsmöglichkeiten wie Captcha
-etc.  an, was wir allerdings für unser kleines Tippspiel aufgrund der geringen 
-Laufzeit nicht benötigten. Da wir einen schnellen Einstieg für den Teilnehmer 
-uns wünschten, verzichteten wir außerdem auf eine Aktivierungsemail und loggten
-den User sofort nach der Registrierung ein.
+wissen. Auch bieten sich hier besondere Sicherungsmöglichkeiten wie Captchas,
+etc. an, was wir allerdings für unser kleines Tippspiel aufgrund der geringen 
+Laufzeit nicht benötigten. Da wir uns einen schnellen Einstieg für den 
+Teilnehmer wünschten, verzichteten wir außerdem auf eine Aktivierungsemail und 
+loggten den User sofort nach der Registrierung ein.
 
 \section{Passwort vergessen}
 Da eine erleichterte Registrierung schnell zu fehlerhaften bzw. vergessenen 
 Passwörtern führen kann, wurde noch eine „Passwort vergessen“-Funktion 
-eingeführt, die dem Teilnehmer nach dem Eintragen seiner E-mailadresse, sein 
-neues, zufallsgenerierte Passwort zuschickt. Bei der Entwicklung dieser
-Funktion  kann man sich auch hier wieder auf Django verlassen, das ein Werkzeug
+eingeführt, die dem Teilnehmer nach dem Eintragen seiner Emailadresse, sein 
+neues, zufallsgeneriertes Passwort zuschickt. Auch bei der Entwicklung dieser
+Funktion kann man sich wieder auf Django verlassen, da es sowohl ein Werkzeug
 zum E-mail versenden anbietet, als auch eine Funktion zur Erstellung von 
-zufälligen Passwörtern, was jedoch bei uns selbst durch ein kleinen Einzeiler 
+zufälligen Passwörtern, was jedoch bei uns selbst durch einen kleinen Einzeiler 
 programmiert wurde.
 
-\chapter{Hilfsskripte}
+\chapter{Hilfsskripte}\label{hilfsskripte}
 \section{Auslesen der Mannschaften}
 Um die teilnehmenden Mannschaften nicht alle von Hand in die Datenbank
-eintragen  zu müssen haben wir ein Skript geschrieben, dass mit BeautifulSoup 
-den Quelltext der Fifa Homepage 
-(http://de.fifa.com/worldcup/standings/index.html) einliest, die relevanten 
-Informationen extrahiert und damit die Datenbank füllt. Dabei hat sich 
+eintragen zu müssen, haben wir ein Skript geschrieben. Dieses liest mit 
+BeautifulSoup den Quelltext der Fifa Homepage 
+(http://de.fifa.com/worldcup/standings/index.html) ein, die relevanten 
+Informationen werden extrahiert und damit die Datenbank gefüllt. Dabei hat sich
 herausgestellt, dass BeautifulSoup nicht ganz so flexibel ist, wie es 
 wünschenswert gewesen wäre. So sind die Informationen auf der Seite der Fifa 
-z.B. in einer Tabelle angeordnet. Dabei wären Selektoren wie sie bei CSS3 
-vorkommen wünschenswert gewesen (z.B. 'tr td.l a strong'). So war es z.B. nicht
-möglich eine Tabellenzelle ausgehend von der Klasse der Zeile zu selektieren. 
-Dies hätte das ganze dynamischer gemacht und wäre auch mit einem leicht 
-veränderten Design von Seiten der Fifa zurecht gekommen. Da dies nicht möglich 
-ist haben wir die Pfade "statisch" aufgebaut, was das Skript natürlich schlecht
-wiederverwendbar macht, da man für jede neue Seite die Pfade komplett neu 
-aufbauen muss. Eine Alternative wäre hierbei lxml gewesen. Dort wird 
-CSS3-Selektor Unterstützung versprochen. Das Problem dabei ist nur, dass lxml 
-ein Pythonic binding für die Bibliotheken "libxml2" und "libxslt" ist. Diese 
-Bibliotheken laufen allerdings unter C und da wir im "pure Python" soweit wie 
-möglich bleiben wollten, haben wir uns (auch der Einfachheit halber um nicht 
-noch einen Parser "lernen" zu müssen) für BeautifulSoup entschieden. Dieses 
-Skript wurde vor dem offiziellen Start des Tippspiels einmal zum Befüllen der 
-Datenbank ausgeführt.
+z.B. in einer Tabelle (HTML table) angeordnet. Dabei wären Selektoren, wie sie 
+bei CSS3 vorkommen, brauchbarer gewesen (z.B. 'tr td.l a strong'). So war es 
+z.B. nicht möglich eine Tabellen-Zelle ausgehend von der Klasse der 
+Tabellen-Zeile zu selektieren. Dies hätte das Ganze dynamischer gemacht und 
+wäre auch mit einem leicht veränderten Design von Seiten der Fifa 
+zurechtgekommen. Als Notlösung haben wir die Pfade "statisch" aufgebaut, was
+das Skript natürlich schlecht wiederverwendbar macht, da man für jede neue 
+Seite die Pfade komplett neu aufbauen muss. Eine Alternative hierbei wäre lxml 
+gewesen. Dort wird CSS3-Selektor Unterstützung versprochen. Dagegen ist hier 
+problematisch, dass lxml ein Pythonic binding für die Bibliotheken "libxml2"
+und  "libxslt" ist. Diese Bibliotheken laufen allerdings unter C und weil wir 
+soweit wie möglich "pure Python" bleiben wollten, haben wir uns (auch der 
+Einfachheit halber um nicht noch einen Parser "lernen" zu müssen) für 
+BeautifulSoup entschieden. Dieses Skript wurde vor dem offiziellen Start des 
+Tippspiels einmal zum Befüllen der Datenbank ausgeführt.
 
 \section{Auslesen der Spiel-Ergebnisse}
-Das Auslesen der Mannschaften per Skript zu realisieren war nur eine kleine 
-Erleichterung, da es nur einmal ausgeführt wurde. Da wir aber nun schon ein 
-Skript haben, welches mit der Struktur der Fifa Seite vertraut ist, haben wir 
-dieses Skript angepasst um die Ergebnisse der Spiele auszulesen  (von
+Das Auslesen der Mannschaften per Skript zu realisieren, welches ja nur einmal 
+benutzt wird, war nur eine kleine Erleichterung. Da wir aber nun schon ein
+Skript haben, das mit der Struktur der Fifa Seite vertraut ist, haben wir
+dieses angepasst, um die Ergebnisse der Spiele auszulesen  (von
 http://de.fifa.com/worldcup/matches/index.html). Interessant hierbei war, dass 
 bei manchen Spielen ein Halbzeitergebnis angegeben wurde und bei anderen nicht.
 Dieses stand allerdings in der gleichen Tabellenzeile wie das "normale" 
 Ergebnis. Mit Hilfe von string.find() und anderen String-Funktionen konnten wir
 dies jedoch relativ zuverlässig filtern. Zur Identifikation der Spiele zogen
-wir  das Datum samt Uhrzeit heran, was allerdings zu einem Problem wurde, als 
+wir das Datum samt Uhrzeit heran, was allerdings zu einem Problem wurde, als 
 mehrere Spiele zur gleichen Zeit stattfanden. Hier musste noch auf die 
-jeweiligen Mannschaften ausgewichen werden. Das grundlegende Problem besteht 
-nunmal darin die Daten der Homepage mit denen der Datenbank abzustimmen und 
-entsprechend zu updaten. Um das Skript nicht nach jedem Spiel per Hand
-ausführen  zu müssen, haben wir einen Cronjob geschrieben, der das Skript in 
-regelmäßigen Abständen ausführt und so die aktuellen Ergebnisse einpflegt.
+jeweiligen Mannschaften als zusätzliches Identifikations-Kriterium ausgewichen 
+werden. Das grundlegende Problem besteht nunmal darin, die Daten der Homepage 
+mit denen der Datenbank abzustimmen und entsprechend zu aktualisieren. Um das 
+Skript nicht nach jedem Spiel per Hand ausführen zu müssen, haben wir einen 
+Cronjob geschrieben, der das Skript in regelmäßigen Abständen ausführt und so 
+die aktuellen Ergebnisse einpflegt.
 
 \chapter{Darstellung der Anwendung}
 \section{Django Templatesprache}
@@ -405,7 +408,7 @@ nicht das komplette Layout neu einbauen müssen, da er sonst im schlimmsten Fall
 bei einer Layoutänderung, z.B. Copyright-Rechtsbestimmungen erneuert, mehrere 
 hundert Dateien ändern müsste. Aus diesem Grund kann mit Hilfe der 
 Template-Sprache eine Basis-Datei angelegt werden, in der die inhaltlichen 
-Blöcke markiert werden, z.B.
+Blöcke markiert werden. Zum Beispiel:
 
 \begin{lstlisting}[caption=Beispiel]{Beispiel Block}
 {% block content %}
@@ -415,31 +418,51 @@ Blöcke markiert werden, z.B.
  
 Nun kann man weitere Templates anlegen, die sich mit dieser Basis-Datei 
 erweitern, jedoch einen eigenen Content-Block besitzen und somit den alten
-Block  der Basis-Datei mit dem eigenen Inhalt ersetzen.
+Block der Basis-Datei mit dem eigenen Inhalt ersetzen.
 
 Weiter muss eine Template-Sprache dem Nutzer vielfältige 
 Formatierungsmöglichkeiten bieten, welche dem Designer den Weg zu einer 
 dynamischen Seite ebnet. Ein Hilfsmittel sind die bekannten Tags, wie 
-IF-ELSE-Blocken und Schleifen, die Listen, Dictionaries oder Objekte auslesen. 
+IF-ELSE-Blöcke und Schleifen, die Listen, Dictionaries oder Objekte auslesen. 
 Ein weiteres Hilfsmittel sind die Filter, die z.B. prüfen, ob die gewünschte 
 Variable existiert bzw. ein None oder False zurückgibt und dies dann mit 
-vorgegebenen Defaultwert ersetzen. Häufig werden auch Tag-Filter, benutzt, um 
+vorgegebenen Defaultwerten ersetzen. Häufig werden auch Tag-Filter, benutzt, um 
 HTML-Tags zu beseitigen oder zu verändern.
 
 
 %\section{Portierung auf Produktionsserver}
 \chapter{Fazit}
 %\section{Erfahrung und Ausblick}
-Das Erstellen des WMTippspiel hat viel Spaß gemacht aber hat auch auf der
-anderen Seite viel Zeit in Anspruch genommen. Aufgrund der Aktualität zur
+Das Erstellen des WMTippspiel hat viel Spaß gemacht, hat aber auf der
+anderen Seite auch viel Zeit in Anspruch genommen. Aufgrund der Aktualität zur
 Weltmeisterschaft war es super zu sehen, wie die User der Anwendung
 mitgefiebert haben und der Seite treu geblieben sind. Die Arbeit mit Django ging
-reibungslos nur die Portierung auf dem Produnktionsserver hat etwas Zeit in 
-Anspruch genommen. Da etwas Aufwand von Nöten war Apache und WSGI mit der 
-Anwendung kommunizieren zu lassen. Aber nach anfänglichen Hürden stand das 
-Projekt online.
+reibungslos, nur die Portierung auf dem Produnktionsserver hat etwas Zeit in 
+Anspruch genommen. Dies war darauf zurückzuführen, dass es einigen Aufwand von Nöten ist, Apache und WSGI mit der
+Anwendung kommunizieren zu lassen. Aber nach anfänglichen Hürden war das 
+Projekt pünktlich zum Start der Fussball-WM 2010 online.
 
 Wir haben noch viele Ideen für die Anwendung, doch aus Zeitgründen konnten
-nicht alle Ideen umgesetzt werden. Die Ideen nehmen wir mit und vielleicht
+nicht alle Wünsche umgesetzt werden. Die Ideen nehmen wir mit und vielleicht
 entsteht aus dem Projekt ein Bundesliga-Tippspiel für die nächste Saison. 
+
+
+
+\begin{thebibliography}{99}
+\bibitem{Fifa}
+http://de.fifa.com/index.html
+\bibitem{BeautifulSoup}
+http://www.crummy.com/software/BeautifulSoup/
+\bibitem{Universal Feed Parser}
+http://www.feedparser.org/
+\bibitem{Python}
+http://python.org/
+\bibitem{Django}
+http://www.djangoproject.com/
+\bibitem{jQuery}
+http://jquery.com/
+\end{thebibliography}
+
+
+
 \end{document}
