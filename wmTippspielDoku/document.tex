@@ -4,98 +4,102 @@
 %
 %
 %
-\documentclass[titlepage, 12pt,a4paper]{scrartcl}
+%\documentclass[titlepage, 12pt,a4paper]{scrartcl}
 %scrartcl
-\usepackage[ngerman]{babel}
-%\usepackage[latin1]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{ucs}            % Eventuell benötigt
-\usepackage[utf8x]{inputenc}
+%\usepackage[ngerman]{babel}
+%%\usepackage[latin1]{inputenc}
+%\usepackage[T1]{fontenc}
+%\usepackage{ucs}            % Eventuell benötigt
+%\usepackage[utf8x]{inputenc}
 
-\usepackage{setspace}           % Paket fuer den Zeilenabstand
-\onehalfspacing                 % Setzt den Zeilenabstand auf 1.5
+%\usepackage{setspace}           % Paket fuer den Zeilenabstand
+%\onehalfspacing                 % Setzt den Zeilenabstand auf 1.5
 
-\usepackage{graphicx}
-\usepackage{listings}
-\usepackage[hyphens]{url}
-%\usepackage{breakurl}
-\usepackage{hyperref}
-\usepackage[usenames]{color}
-\definecolor{light-gray}{gray}{0.90}
-\usepackage[fixlanguage]{babelbib}
-\usepackage{listings}
-%\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt}
-%\lstset{language=Perl}
-\lstloadlanguages{bash,XML,HTML, PHP, Python}
-\selectbiblanguage{german}
-\usepackage{makeidx}
-%\usepackage{pifont}
-\makeindex
-%\usepackage{fancyhdr}
-%\setlength{\headheight}{15.2pt}
-%\pagestyle{fancy}
+%\usepackage{graphicx}
+%\usepackage{listings}
+%\usepackage[hyphens]{url}
+%%\usepackage{breakurl}
+%\usepackage{hyperref}
+%\usepackage[usenames]{color}
+%\definecolor{light-gray}{gray}{0.90}
+%\usepackage[fixlanguage]{babelbib}
+%\usepackage{listings}
+%%\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt}
+%%\lstset{language=Perl}
+%\lstloadlanguages{bash,XML,HTML, PHP, Python}
+%\selectbiblanguage{german}
+%\usepackage{makeidx}
+%%\usepackage{pifont}
+%\makeindex
+%%\usepackage{fancyhdr}
+%%\setlength{\headheight}{15.2pt}
+%%\pagestyle{fancy}
 
 
-\author{Moritz Schächterle, Dominik Heimstädt \& Andrés Cuartas}
-\title{- Studienarbeit Python - \\ WM-Tippspiel 2010 \\}
+%\author{Moritz Schächterle, Dominik Heimstädt \& Andrés Cuartas}
+%\title{- Studienarbeit Python - \\ WM-Tippspiel 2010 \\}
 %\date{11-Dez-2007}
 
-\pagestyle{myheadings}
-\markright{Schaechterle, Heimstaedt \& Cuartas}
-\lstset{
-	inputencoding=utf8x,
-	extendedchars=\true,
-	language=Python,
-	basicstyle=\tiny,
-	keywordstyle=\bfseries\color{green},
-	identifierstyle=,
+%\pagestyle{myheadings}
+%\markright{Schaechterle, Heimstaedt \& Cuartas}
+%\lstset{
+%	inputencoding=utf8x,
+%	extendedchars=\true,
+%	language=Python,
+%	basicstyle=\tiny,
+%	keywordstyle=\bfseries\color{green},
+%	identifierstyle=,
 	%commentstyle=\color{gray},	
 	%stringstyle=\itshape\color{darkred},
-	numbers=left,
-	numberstyle=\tiny,
-	stepnumber=1,
-	breaklines=true,
-	frame=none,
-	showstringspaces=false,
-	tabsize=4,
-	backgroundcolor=\color{light-gray},
-	captionpos=b,
-	float=htbp,
-	frameround=fttt
-}
+%	numbers=left,
+%	numberstyle=\tiny,
+%	stepnumber=1,
+%	breaklines=true,
+%	frame=none,
+%	showstringspaces=false,
+%	tabsize=4,
+%	backgroundcolor=\color{light-gray},
+%	captionpos=b,
+%	float=htbp,
+%	frameround=fttt
+%}
 
 
-%\lstset{language=XML, stringstyle=\ttfamily, tabsize=2, basicstyle=\small, breaklines=true, backgroundcolor=\color{light-gray}, frameround=fttt}
-%              
-% WORKAROUND, damit lstlistoflistings funktioniert: 
-% Quelle: http://www.komascript.de/node/477
-%
-\makeatletter% --> De-TeX-FAQ
-\renewcommand*{\lstlistoflistings}{%
-  \begingroup
-    \if@twocolumn
-      \@restonecoltrue\onecolumn
-    \else
-      \@restonecolfalse
-    \fi
-    \lol@heading
-    \setlength{\parskip}{\z@}%
-    \setlength{\parindent}{\z@}%
-    \setlength{\parfillskip}{\z@ \@plus 1fil}%
-    \@starttoc{lol}%
-    \if@restonecol\twocolumn\fi
-  \endgroup
-}
-\makeatother% --> \makeatletter 
+%%\lstset{language=XML, stringstyle=\ttfamily, tabsize=2, basicstyle=\small, breaklines=true, backgroundcolor=\color{light-gray}, frameround=fttt}
+%%              
+%% WORKAROUND, damit lstlistoflistings funktioniert: 
+%% Quelle: http://www.komascript.de/node/477
+%%
+%\makeatletter% --> De-TeX-FAQ
+%\renewcommand*{\lstlistoflistings}{%
+%  \begingroup
+%    \if@twocolumn
+%      \@restonecoltrue\onecolumn
+%    \else
+%      \@restonecolfalse
+%    \fi
+%    \lol@heading
+%    \setlength{\parskip}{\z@}%
+%    \setlength{\parindent}{\z@}%
+%    \setlength{\parfillskip}{\z@ \@plus 1fil}%
+%    \@starttoc{lol}%
+%    \if@restonecol\twocolumn\fi
+%  \endgroup
+%}
+%\makeatother% --> \makeatletter 
+
+\include{parts/header}
+
+
 
 \begin{document}
-
-\maketitle
+\include{parts/titlepage}  
+%\maketitle
 \newpage
 
 \tableofcontents
 \newpage
-
+\chapter{Aufgabenstellung}
 \section{Einführung}
 Im Rahmen der Vorlesung „Internetprogrammierung mit Python“ ist eine
 Studienarbeit zu erstellen. Aus mehreren zur Auswahl stehenden Arbeiten ist die
@@ -124,6 +128,7 @@ die einfache Userverwaltung, der schnell zu konfigurierbare Adminbereich der
 zur Verfügunggestellt wird, der OR-Mapper, das Templatesystem und der DRY: Don't
 repeat yourself Ansatz. 
 
+\chapter{Web Framework}
 \section{Django}
 Das Django Webframework eignet sich für die Erstellung von Webanwendungen. Es
 folgt dem MVC\footnote{Model View Control} Muster. Wobei bei Django die Modelle
@@ -136,9 +141,7 @@ verwechseln mit der View), die die Kontrolle über die Anwendung bieten. Diese
 beinhalten die Geschäftslogik und dienen als Verbindung zwischen den Modellen
 und den Templates.
 
-
-\section{Modelle}
-\subsection{Klassen}
+\section{Klassen}
 Für die Anwendung stand zuerst die Erstellung der Klassen bzw. der
 Datenbankmodelle die benötigt werden, um die vorgestellten Ziele erreichen zu
 können. Folgende Klassen werden für die Anwendung benötigt. 
@@ -172,7 +175,7 @@ class Tipps(models.Model):
    
 \end{lstlisting}
 
-\subsection{OR-Mapping}
+\section{OR-Mapping}
 Mit Hilfe des eingebauten OR-Mappers in Django können die Tabellen aus den
 vorher definierten Klassen als Tabellen in die Datenbank gespeichert werden.
 Die Speicherung bzw. Synchronisation geschieht mit Django eigenen Boardmitteln.
@@ -192,7 +195,7 @@ Views\footnote{Django funktion} für PostgreSQL angepasst werden, weil
 Exceptions von Django zurückgegeben wurden, die auf Probleme mit dem Speichern
 und Auslesen von Daten zurückzuführen waren.
 
-\subsection{Administration}
+\section{Administration}
 Mit Hilfe der Django eigenen Administrationsoberfläche, die einfach als
 Applikation in der \emph{settings.py}\footnote{Datei beinhaltet alle
 Umgebungsvariablen des Projektes} installiert werden kann, können leicht die
@@ -202,9 +205,8 @@ Eintragung von Datenfeldern zur Verfügung gestellt. In dem Zusammenhang wurde
 entschienden, die benötigten Informationen über Skripte, automatisch befüllen zu
 lassen genaueres im Kapitel \ref{hilfsskripte} auf Seite \pageref{hilfsskripte}. 
 
-
+\chapter{Implementierung}
 \section{Views}
-\subsection{Funktionalität}
 Die Geschäftslogik wird mit Hilfe der Views erstellt. Der Name ist hier etwas
 irreführend, weil man View mit der Ausgabe, also HTML verküpft. Die View ist die
 Schnittstelle, mit der die Anwendung mit dem Server/Client kommuniziert. Im
@@ -214,7 +216,7 @@ View angesprochen. Diese führt Befehle aus, die ihre Ergenisse einem Template
 schließlich dann HTML, welches dem Server zur Weiterleitung an den Client zur
 Verfügung gestellt wird.
 
-\subsection{URL-Dispatching}
+\section{URL-Dispatching}
 In Django gibt es eine Kontrollinstanz, die ermöglicht, abhängig von der URL,
 auf die verschiedenen Views der Seite zu verweisen. Einstellungen können in der
 \emph{urls.py} gemacht werden. Mit Hilfe regulärer Audrücke wird die URL
@@ -244,7 +246,7 @@ urlpatterns = patterns('',
 )
 \end{lstlisting}
 
-\subsection{Django App}
+\section{Django App}
 Im wmTippspiel wurde eine App\footnote{Eigenständiger Teil einer Webanwendung,
 kann in verschiedenen Projekten eingebunden werden} erstellt und ausgelagert, so
 kann die erstellte Applikation auch in anderen Internetseiten ohne viel Aufwand 
@@ -261,8 +263,8 @@ Seite registrieren können. Diese Applikation kann thematisch gut von der
 appWMTippspiel abgegrenzt werden und in anderen Projekten eingesetzt werden. 
 Was zu dem Don't repeat Yourself Gedankten Djangos passt.
 
-\section{Login und Registrierung}\label{registrierung}
-\subsection{User-Authentifikation}
+\chapter{Zugangsmechanismus}
+\section{User-Authentifikation}
 In unserem Projekt stellte sich das User-Authentifikation-System als eines der
 drei größeren UseCases heraus. Wichtig erschien uns, dass der Besucher beim 
 ersten Besuch ohne großen Zeitaufwand einen Account erstellen kann und dann 
@@ -296,7 +298,7 @@ Prüfung,  welche Django selbst in der View-Datei per „Shortcut“ übernimmt:
     bspVar = 1 …
 \end{lstlisting}
 
-\subsection{Admin-Bereich für das User-Management}
+\section{Admin-Bereich für das User-Management}
 Zuallererst eine gute Nachricht: das Entwickeln des Admin-Bereichs  (eine
 aufwendige Aufgabe, deren Mühen der normale Besucher nicht würdigt) kann man 
 sich mit Django getrost sparen. Es generiert automatisch für jedes erstellte 
@@ -306,7 +308,7 @@ oder Bedienbarkeit können mit Hilfe der Django Online-Dokumentation schnell
 gemacht werden, meistens sind sie aber nicht von Nöten.
 
 
-\subsection{Login-Werkzeug von Django}
+\section{Login-Werkzeug von Django}
 Auch beim Erstellen eines Logins kann man sich im Großen und Ganzen auf die 
 Bibliothek django.contrib.auth.views.login verlassen.. Dies kann ganz einfach 
 direkt in der url.py aufgerufen werden, wahlweise mit einem Template oder auch 
@@ -323,13 +325,13 @@ mitgegeben, in welchem die Adresse zu dem Bild gespeichert wird, damit er nach
 erfolgreichem Login dort auch landet.
 
 
-\subsection{Logout bei Django}
+\section{Logout bei Django}
 Für den Logout reicht ebenfalls die vorgegeben Funktion 
 django.contrib.auth.views.logout in der urls.py einzustellen, da sie ja kein 
 eigenes Template oder besondere Einstellungen bedarf.
 
 
-\subsection{Registrierung}
+\section{Registrierung}
 Für die Registrierung selbst gibt es allerdings keine Hilfen seitens Django, da
 sie meist eine sehr individuelle Sache ist, z.B. möchte man bei einer Webshop 
 Kontodaten, bei einer Online-Community vielleicht Geburtsdatum und Hobbies usw.
@@ -339,7 +341,7 @@ Laufzeit nicht benötigten. Da wir einen schnellen Einstieg für den Teilnehmer
 uns wünschten, verzichteten wir außerdem auf eine Aktivierungsemail und loggten
 den User sofort nach der Registrierung ein.
 
-\subsection{Passwort vergessen}
+\section{Passwort vergessen}
 Da eine erleichterte Registrierung schnell zu fehlerhaften bzw. vergessenen 
 Passwörtern führen kann, wurde noch eine „Passwort vergessen“-Funktion 
 eingeführt, die dem Teilnehmer nach dem Eintragen seiner E-mailadresse, sein 
@@ -349,8 +351,8 @@ zum E-mail versenden anbietet, als auch eine Funktion zur Erstellung von
 zufälligen Passwörtern, was jedoch bei uns selbst durch ein kleinen Einzeiler 
 programmiert wurde.
 
-\section{Hilfsskripte}\label{hilfsskripte}
-\subsection{Auslesen der Mannschaften}
+\chapter{Hilfsskripte}
+\section{Auslesen der Mannschaften}
 Um die teilnehmenden Mannschaften nicht alle von Hand in die Datenbank
 eintragen  zu müssen haben wir ein Skript geschrieben, dass mit BeautifulSoup 
 den Quelltext der Fifa Homepage 
@@ -374,7 +376,7 @@ noch einen Parser "lernen" zu müssen) für BeautifulSoup entschieden. Dieses
 Skript wurde vor dem offiziellen Start des Tippspiels einmal zum Befüllen der 
 Datenbank ausgeführt.
 
-\subsection{Auslesen der Spiel-Ergebnisse}
+\section{Auslesen der Spiel-Ergebnisse}
 Das Auslesen der Mannschaften per Skript zu realisieren war nur eine kleine 
 Erleichterung, da es nur einmal ausgeführt wurde. Da wir aber nun schon ein 
 Skript haben, welches mit der Struktur der Fifa Seite vertraut ist, haben wir 
@@ -392,8 +394,8 @@ entsprechend zu updaten. Um das Skript nicht nach jedem Spiel per Hand
 ausführen  zu müssen, haben wir einen Cronjob geschrieben, der das Skript in 
 regelmäßigen Abständen ausführt und so die aktuellen Ergebnisse einpflegt.
 
-\section{Templates}
-\subsection{Django Templatesprache}
+\chapter{Darstellung der Anwendung}
+\section{Django Templatesprache}
 Django besitzt eine eigene Template-Sprache, die es ermöglichen soll, dass der 
 Designer unabhängig vom Programmierer mit der Implementierung des Layouts 
 beginnen kann. Über eine Schnittstelle übergibt Letzterer die benötigten 
@@ -424,8 +426,10 @@ Variable existiert bzw. ein None oder False zurückgibt und dies dann mit
 vorgegebenen Defaultwert ersetzen. Häufig werden auch Tag-Filter, benutzt, um 
 HTML-Tags zu beseitigen oder zu verändern.
 
+
 %\section{Portierung auf Produktionsserver}
-\section{Fazit}
+\chapter{Fazit}
+%\section{Erfahrung und Ausblick}
 Das Erstellen des WMTippspiel hat viel Spaß gemacht aber hat auch auf der
 anderen Seite viel Zeit in Anspruch genommen. Aufgrund der Aktualität zur
 Weltmeisterschaft war es super zu sehen, wie die User der Anwendung
