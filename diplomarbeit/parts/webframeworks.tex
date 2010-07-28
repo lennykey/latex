@@ -55,7 +55,7 @@ Glueframeworks.
 Ein Fullstackframework bringt alle möglichen Komponenten mit,
 um eine Webanwendung schreiben zu können. Unter anderem sind das ein OR-Mapper
 für die Datenbank, eine eigene Templatesprache oder ein
-URL-Dispatcher\footnote{http://www.w3.org/Provider/Style/URI} für lesbare
+URL-Dispatcher\footnote{\url{http://www.w3.org/Provider/Style/URI}} für lesbare
 Links. Der Vorteil eines solchen Frameworks ist, dass eine klare Linie 
 vorgegeben wird, um eine Anwendung schreiben zu können. Dies führt in der Regel
 zu schnellen Ergebnissen. Vertreter dieser Art sind z.B. Django.
@@ -69,7 +69,41 @@ werden. Es ist aber ein größerer Aufwand nötig, um diese losen Teile
 zusammenzubringen. Das bekannteste Framework dieser Art in Python ist TurboGears.
 
 \section{Weitere Unterscheidungsmerkmale}
+\subsection{Funktionalität}
+Wenn ein neues Produkt das Interesse geweckt hat, liegt es meistens an der
+Funktionalität, die es anbietet. Für eine Webapplikation ist es wichtigt, dass
+auf eine Art und Weise der Client auf die Datein mittels Browser zugreifen
+kann. Als Schnittstelle bietet sich im Pythonumfeld
+WSGI\footnote{\url{http://wsgi.org/wsgi/}} an, damit der Webserver mit der
+Webapplikation kommunizieren kann, die wiederum HTML an den Client liefert. Für
+einfache Anwendungen reicht es aus HTML-Code mit Hilfe von Python zu generieren
+und diesem dem User zur Verfügung zu stellen. Soll die Anwendung aber
+komplexere Ausmaße haben und zum Beispiel eine Userverwaltung mit LogIn
+Möglichkeit bieten ist es ratsam ein Framework auszuwählen, welches diese
+Funktionalität mit einfachen Handgriffen bietet. Auch die Kommunikation zu
+Datenbanken ist ein wichtiger Bestandteil, da viele Webapplikationen Klassen
+bereitstellen, mittles derer Objekte generiert werden, die miteinander
+interagieren. Daraus entstehen meinstens Informationen die persistent gehalten
+werden müssen. Beispiele sind Webshops, Blogs/Wikis oder soziale Netzwerke. Bei
+der Entwicklung sollte auch berücksichtigt werden, dass Webdesigner leicht im
+Entwicklungsprozess intergriert werden können. Dabei sollte wichtig sein, dass
+CSS und JavaScript (oder JavaScript-Frameworks), die als Standard bei der
+Gestaltung gelten eingesetzt werden können. Dabei spielen Templatesprachen für
+die erstellung des HTML-Codes eine große Rolle, denn viele Webframeworks bieten
+Templatesprachen, die sich an Pythoncode anlehnen aber nur geringe logische
+Funktionalität bieten und im Grunde nur für die Darstellung der einzelnen
+Seiten konzipiert sind.
 
+\subsection{Dokumentation}
+Viele Projekte und im Spezeiellen hier Webframeworks werden hauptsächlich wegen
+ihre Funktionalität ausgewählt. Ein weiterer Grund kann auch ihre Popularität
+sein auf Grund eines Hypes. Ein sehr wichtiger Aspekt, um überhaupt mit einem
+Framework oder Programmiersprache anzufangen, ist die Lernhürde die manchmal
+hoch sein kann. Deswegen ist es wichtig und sollte eine Priorität der
+Entwickler sein die Frameworks sehr gut zu dokumentieren und Anfängertutorials
+zu anzubieten. 
+
+\section{Bekannte Webframeworks im Pythonumfeld}
 \section{Webframeworks anderer Programmiersprachen }
 \section{Arbeiten ohne Framework}
 Die Erstellung einer Anwendung ohne ein entsprechendes Framework ist sehr
