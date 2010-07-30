@@ -154,11 +154,12 @@ mit einer Vielzahl von Funktionen. Darüber hinaus existieren eine Menge
 Frameworks, die den Entwlickler bei der Arbeit unterstützen. Unter anderen Zend,
 CakePHP oder Symphony.
 
-Andere Programmiersprachen, wie Ruby, Java oder Perl ermöglichen ebenfalls fürs
-Web Programme zu schreiben und einem breiten Publikum zur Verfügung zu stellen.
-Darunter bekannte wie Ruby on Rails, Spring oder Jifty. Zwar liegt der Focus
-auf Python, dennoch ist es wichtig andere Möglichkeiten der Webentwicklung für
-einen besseren Überblick kurz vorzustellen.
+Andere Programmiersprachen, wie Ruby, Java oder
+Perl\footnote{\url{http://www.socialtext.net/perl5/index.cgi?web_frameworks}} 
+ermöglichen ebenfalls Programme fürs Web zu schreiben und einem breiten 
+Publikum zur Verfügung zu stellen. Darunter bekannte wie Ruby on Rails, Spring 
+oder Jifty. Zwar liegt der Focus auf Python, dennoch ist es wichtig andere 
+Möglichkeiten der Webentwicklung für einen besseren Überblick kurz vorzustellen.
 
 \subsection{Zend}
 Das Zend Framework erweitert die Kunst und den Geist von PHP, dabei besiert es
@@ -168,24 +169,52 @@ Frameworks auf sicherere und moderne Web 2.0 Anwendungen und Webservices.
 \cite{zend}
 
 \subsection{Ruby on Rails}
+Rub on Rails ist eine OpenSource Webframework für die Zufriedenstellung der
+Webentwickler und kontinuierliche Unterstützung der Produktivität. Damit lässt
+es sich wunderbaren code schreiben wobei das Design Paradigma Convention over
+Configuration\footnote{Convention over Configuration: Dabei ist das Design
+Paradigma gemeint, bei dem der Entwickler Regeln folgen muss um z.B. dass
+Primärschlüssel in der Datenbank Integer sein müssen oder Klassennamen und
+Tabellennamen gleich lauten müssen} angewandt wird.\cite{rubyonrails}
 
+„Ruby on Rails is a breakthrough in lowering the barriers of entry to
+programming. Powerful web applications that formerly might have taken weeks or 
+months to develop can be produced in a matter of days.“\footnote{Tim O'Reilly,
+Founder of O'Reilly Media: \url{http://rubyonrails.org/quotes} }
 
+\subsection{Catalyst}
+Das Catalyst ist ein in Perl geschriebenes  MVC\footnote{MVC: Model View
+Controler Design Muster
+\url{http://www.oracle.com/technetwork/java/mvc-140477.html}} Webframework. 
+Dieses Framework kann auf verschiedenen Plattformen installiert werden und ist 
+für schnelle Webentwicklung geeignet.\cite{catalystperlnet}
 
+Bei der Entwicklung wird bedacht auch KISS\footnote{KISS: Keep it simple
+stupid \url{http://techcrunch.com/2009/04/28/keep-it-simple-stupid/}} gelegt,
+was dazu führt, dass Catalyst skalierbar und robust bleibt. Was sich bei den 
+daraus entwickelten Applikationen bemerkbar macht.\cite{catalystframework}
 
+\subsection{Wicket}
+Mit zweckmäßiger Aufteilung von Darstellung und Logik, ein POJO\footnote{POJO: Plain Old Java
+Object \url{http://www.martinfowler.com/bliki/POJO.html}} Datenmodell und
+erfrischendem Verzicht von XML, macht Apache Wicket das Entwickeln von
+Webapplikationen wieder einfach und angenehm. Es wird mit unnötigem Code,
+komplexem Debugging und brüchigem Code gebrochen, um wiederverwendbare
+Komponenten, die nur auf Java und HTML aufbauen zu erstellen.\cite{wicket}
 
 \section{Arbeiten ohne Framework}
-Die Erstellung einer Anwendung ohne ein entsprechendes Framework ist sehr
-mühsam. Der Entwlickler hat zwar alle Möglichkeiten eine entsprechende
-Anwendung zu schreiben. Ihm wird aber vieles abgenommen. Viele Frameworks
-bringen Unterstützung in Domänen, wie z.B. Sicherheit, Benutzerverwaltung und
-Applikationsadministration. Diese müssen, falls gewünscht neu geschribeben
-werden und lenke somit von der eigentlichen Applikation ab. Wenn also eine
-Applikation eine gewissen Komplexität erreicht hat oder erreichen soll, ist es
-ratsam sich mit einem Frameworkt auseinander zu setzen und von erfahrenen
-Entwicklern, die diese Arbeit bereits geleistet haben zu profitieren. Die
-meisten Frameworks arbeiten nach dem Prinzip „Don't repeat your self“ oder
-„KISS“ keep it simple stupid. Somit werden immer wiederkehrende Aufgaben, die
-mit komplexen Projekten verbunden sind bereits vorgefertigt geliefert und der
-Entwlickler kann sich sofort dem eigentlichen Projekt widmen. 
+Die Erstellung einer Anwendung ohne ein entsprechendes Framework ist
+natürlich möglich doch oft sehr mühsam. Der Entwlickler hat alle Freiheiten eine
+Anwendung zu schreiben, ihm wird aber mit einem guten Framework vieles
+erleichtert. Webframeworks bringen Unterstützung in Aspekten, wie z.B.
+Sicherheit, Benutzerverwaltung und Applikationsadministration. Diese müssen, 
+falls benötigt von Grund auf immer wieder neu geschriben werden und lenken
+somit von der eigentlichen Entwicklung der Kernapplikation ab. 
+
+Die meisten Frameworks arbeiten nach dem Prinzip „Don't repeat your self“ oder 
+„KISS“ keep it simple stupid. Somit werden immer wiederkehrende Aufgaben, die 
+mit komplexen Projekten verbunden sind bereits vorgefertigt geliefert und der 
+Entwlickler kann sich sofort der eigentlichen Kernaufgabe widmen ohne
+sich um nötigen Boilerplate kümmern zu müssen.
 
 
