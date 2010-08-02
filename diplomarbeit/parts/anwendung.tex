@@ -1,13 +1,14 @@
-\chapter{Anwendung}
-\section{Überblick}
-Im Zuge der Diplomarbeit soll neben einem Vergleich zu Pythonwebframeworks auch
-eine Anwendung für des Rechnertechniklabor der HS Augsburg geschrieben werden.
-Dabei soll der Zugriff auf Mikrocontroller ermöglicht werden, in Form einer
-Webanwendung. Die Anwendung soll den Benutzern den Zugang auf die
-Mikrocontroller ermöglichen. Dabei sollen sie die einzelnen Boards reservieren
-können und aus Performance Gründen nur jeweils einem einzelnen Benutzer
-gleichzeitig den Zugang auf ein Board ermöglicht werden. Darüber hinaus wird
-folgende Funktionalität von der Andwendung aus zugänglich:
+\chapter{Einführung}
+\section{Beispielanwendung}
+Im Zuge der Diplomarbeit soll neben einem Vergleich von Pythonwebframeworks auch
+eine Anwendung für des Rechnertechniklabor der HS Augsburg entwickelt werden.
+Dabei soll der Zugriff auf Informationen und Verwaltung der Mikrocontroller in
+Form einer Webanwendung möglich sein. Dabei kann der Benutzer die einzelnen
+Boards reservieren und anschließend per SSH über das Internet mit den Boards
+arbeiten können. Damit ein reibungsloser Umgang auf den Boards ermöglicht wird
+soll jeweils einem einzelnen Benutzer gleichzeitig der Zugang auf ein Board 
+gewährt werden. Darüber hinaus wird folgende Funktionalität von der Andwendung 
+aus zugänglich:
 
 \begin{itemize}
   \item Power on/off
@@ -46,3 +47,26 @@ Kenntnisse auch im Webumfeld einsetzen kann und keine neue Programmiersprache
 dafür lernen muss. Mit Django, ZOPE, Pylons, web2py gibt es genug Alternativen
 für die Entwicklungen von Anwendungen in der Python-Welt. Diese werden anhand
 einer Beispielanwendung vorgestellt und untersucht.
+
+\section{Durchführung}
+\subsection{GUI}
+Da es sich um eine Webanwendung handelt, kommen für die Interaktion des
+Benutzers mit der Schnittselle XHTML\footnote{XHTML: Extensible
+HyperText Markup Language, \url{http://www.w3.org/TR/xhtml1/} } für die
+Struktur und den Inhalt, CSS2\footnote{Cascading Stylesheets  Level 2,
+\url{http://www.edition-w3.de/TR/1998/REC-CSS2-19980512/}} für die Gestaltung 
+und JavaScript auch in Form eines Frameworks, abhänging davon, was das 
+Webframework anbietet. Beispiele für
+JavaScript-Frameworks\footnote{JavaScript-Frameworks:
+\url{http://webstandard.kulando.de/post/2008/08/21/top-10-aller-javascript-
+frameworks}} sind z.B. jQuery, Dojo oder Prototype mit denen eine Vereinfachte
+Interaktion mit dem Benutzer erstellt werden kann. Da diese Frameworks die
+Möglichkeit bieten die Möglichketen von  AJAX \footnote{AJAX: Asynchronous 
+Javascript and XML,
+\url{http://openbook.galileocomputing.de/javascript_ajax/18_ajax_001.htm}} 
+anzuwenden, kann eine Resourcen schonende Applikation mit schnellen
+Reaktionszeiten erstellt werden, da nicht alle Teile der Anwendung neu geladen 
+werden müssen.
+
+\subsection{Datenbank}
+\subsection{Logik}
