@@ -56,17 +56,42 @@ HyperText Markup Language, \url{http://www.w3.org/TR/xhtml1/} } für die
 Struktur und den Inhalt, CSS2\footnote{Cascading Stylesheets  Level 2,
 \url{http://www.edition-w3.de/TR/1998/REC-CSS2-19980512/}} für die Gestaltung 
 und JavaScript auch in Form eines Frameworks, abhänging davon, was das 
-Webframework anbietet. Beispiele für
+Webframework anbietet, in Frage. Beispiele für
 JavaScript-Frameworks\footnote{JavaScript-Frameworks:
 \url{http://webstandard.kulando.de/post/2008/08/21/top-10-aller-javascript-
 frameworks}} sind z.B. jQuery, Dojo oder Prototype mit denen eine Vereinfachte
 Interaktion mit dem Benutzer erstellt werden kann. Da diese Frameworks die
-Möglichkeit bieten die Möglichketen von  AJAX \footnote{AJAX: Asynchronous 
+Möglichkeit bieten AJAX \footnote{AJAX: Asynchronous 
 Javascript and XML,
-\url{http://openbook.galileocomputing.de/javascript_ajax/18_ajax_001.htm}} 
-anzuwenden, kann eine Resourcen schonende Applikation mit schnellen
-Reaktionszeiten erstellt werden, da nicht alle Teile der Anwendung neu geladen 
-werden müssen.
+\url{http://openbook.galileocomputing.de/javascript_ajax/18_ajax_001.htm}}
+Funktionalität anzuwenden, kann eine Resourcen schonende Applikation mit
+schnellen Reaktionszeiten erstellt werden, da nicht alle Teile der Anwendung 
+geladen werden müssen.
+
+Auf folgender Vorlage\ref{guianwendung}, die mittels HMTL und CSS erstellt
+worden ist, basiert die GUI der Anwendung. Es wurde durchgehend darauf
+geachtet,  dass \emph{em} als Maßeinheit verwendet wird, um ein
+elastisches\footnote{\url{http://greattalk.ch/2008/02/09/die-unglaublichen-em-
+elastischen-layouts-mit-css/}} Layout sicherzustellen. Der Vorteil liegt hier 
+in der besseren Zugänglichkeite der Seite und der Anpassung des Designs an die 
+Schriftgröße des Browsers, welche der User benutzt. So bleiben Skalierungen 
+proportional und es entstehen weniger negative Seiteneffekte beim Zoomen der
+Seite.
+
+\begin{figure}[ht]
+ \begin{center}
+  \includegraphics[scale=0.25]{/home/jupiter/andres/programmieren/latex/eclipseLatexWorkspaceNew/latex/diplomarbeit/images/gui.png}
+ \end{center}
+ \caption{GUI der Anwendung}
+ \label{guianwendung}
+\end{figure}
+
+Darauf aufbauend, wird das Template in den jeweiligen Frameworks angepasst und
+weitere Unterseiten von dieser Seite so weit es geht abgeleitet. So wird es
+einfacher die jeweiligen Möglichkeiten der Template Sprachen der verschiedenen
+Frameworks zu vergleichen. Der Code des Templates kann unter folgender Adresse
+eingesehen werden.
+
 
 \subsection{Datenbank}
 \subsection{Logik}
